@@ -25,7 +25,7 @@ Variables de `.env`:
 ## Base de datos
 
 - Esquema en `supabase/migrations/`. Aplicar con `pnpm db:push`.
-- Tipos TypeScript generados con `pnpm db:types` → `src/lib/database.types.ts`.
+- Tipos TypeScript generados con `pnpm db:types` → `src/lib/database.types.ts` (necesita Docker). Las filas de las vistas se declaran a mano en `src/lib/types.ts` porque el generador las marca todas como nullable.
 - Banco de preguntas: `pnpm db:seed` carga `sample-tables/{exams,units,questions}.json` (upsert por `id`; se puede relanzar).
 - Usuarios: se crean a mano en el dashboard de Supabase (Authentication → Users). No hay registro en la app.
 
