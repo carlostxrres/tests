@@ -75,10 +75,38 @@ type AnswerInput = {
 
 // Inserts a submission, or updates `choice` on an existing one. RLS decides
 // whether an update is allowed (open test with deferred feedback); a rejected
-// update comes back as zero rows, which we surface as an error.
+// update comes back as zero rows, which we surface as an error. The test's
+// submission list is updated optimistically so the tapped option checks
+// immediately.
 export function useAnswerQuestion() {
+  const queryClient = useQueryClient();
   const invalidate = useInvalidateActivity();
   return useMutation({
+    onMutate: async ({ testId, questionId, choice, submissionId }: AnswerInput) => {
+      const key = queryKeys.testSubmissions(testId);
+      await queryClient.cancelQueries({ queryKey: key });
+      const previous = queryClient.getQueryData<SubmissionView[]>(key);
+      const timestamp = new Date().toISOString();
+      queryClient.setQueryData<SubmissionView[]>(key, (old = []) =>
+        submissionId
+          ? old.map((s) => (s.id === submissionId ? { ...s, choice, timestamp } : s))
+          : [
+              ...old,
+              // Only the fields the runner reads; the refetch fills in the rest.
+              {
+                id: `optimistic-${questionId}`,
+                test_id: testId,
+                question_id: questionId,
+                choice,
+                timestamp,
+              } as SubmissionView,
+            ],
+      );
+      return { previous, key };
+    },
+    onError: (_error, _input, context) => {
+      if (context) queryClient.setQueryData(context.key, context.previous);
+    },
     mutationFn: async ({ testId, questionId, choice, submissionId }: AnswerInput) => {
       if (submissionId) {
         const { data, error } = await supabase
