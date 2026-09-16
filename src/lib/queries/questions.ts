@@ -51,3 +51,24 @@ async function fetchQuestionStats(): Promise<QuestionStats[]> {
 export function useQuestionStats() {
   return useQuery({ queryKey: queryKeys.questionStats, queryFn: fetchQuestionStats });
 }
+
+async function fetchQuestionsByIds(ids: string[]): Promise<QuestionDetail[]> {
+  const { data, error } = await supabase
+    .from("questions")
+    .select("*, unit:units(*, exam:exams(*))")
+    .in("id", ids);
+  if (error) throw error;
+  const byId = new Map(data.map((q) => [q.id, q as QuestionDetail]));
+  // Keep the test's own order.
+  return ids.flatMap((id) => byId.get(id) ?? []);
+}
+
+// Full questions of a test, in the test's order.
+export function useQuestionsByIds(ids: string[] | undefined) {
+  return useQuery({
+    queryKey: [...queryKeys.questionIndex, "by-ids", ids ?? []],
+    queryFn: () => fetchQuestionsByIds(ids as string[]),
+    enabled: Boolean(ids && ids.length > 0),
+    staleTime: Infinity,
+  });
+}
