@@ -11,7 +11,8 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "db:seed": "tsx --env-file=.env scripts/seed.ts",
-    "db:types": "supabase gen types typescript --linked > src/lib/database.types.ts"
+    "db:push": "sh -c 'set -a; . ./.env; set +a; supabase db push --db-url \"$DIRECT_URL\"'",
+    "db:types": "sh -c 'set -a; . ./.env; set +a; supabase gen types typescript --db-url \"$DIRECT_URL\" > src/lib/database.types.ts'"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
