@@ -18,6 +18,10 @@ type Props<T extends string> = {
   className?: string;
 };
 
+// An empty option value means "no filter"; Select gets a sentinel instead
+// because "" is treated as "nothing selected".
+const ALL = "__all__";
+
 // Thin wrapper over Select for the small "filter by X" dropdowns.
 export function StatusSelect<T extends string>({
   value,
@@ -27,18 +31,19 @@ export function StatusSelect<T extends string>({
   className,
   ...props
 }: Props<T>) {
+  const items = options.map((o) => ({ value: o.value || ALL, label: o.label }));
   return (
     <Select
-      items={options}
-      value={value}
-      onValueChange={(next) => onValueChange((next ?? "") as T)}
+      items={items}
+      value={value || ALL}
+      onValueChange={(next) => onValueChange((next === ALL || next === null ? "" : next) as T)}
     >
       <SelectTrigger size="sm" className={className} aria-label={props["aria-label"]}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          {options.map((option) => (
+          {items.map((option) => (
             <SelectItem key={option.value} value={option.value}>
               {option.label}
             </SelectItem>

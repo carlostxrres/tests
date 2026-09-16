@@ -46,6 +46,7 @@ export function UnitCombobox({ exams, value, onValueChange, placeholder, classNa
       items={groups}
       value={selected}
       onValueChange={(next: UnitOption | null) => onValueChange(next?.id ?? "")}
+      isItemEqualToValue={(a: UnitOption, b: UnitOption) => a.id === b.id}
       itemToStringLabel={(item: UnitOption) => item.label}
       itemToStringValue={(item: UnitOption) => `${item.examName} ${item.label}`}
     >
