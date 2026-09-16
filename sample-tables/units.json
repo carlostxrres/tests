@@ -1,0 +1,92 @@
+[
+  {
+    "id": "5488eee4-ed19-4fe6-a4e5-df2e1c312a43",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Consorci del Patrimoni de Sitges",
+    "number": 1
+  },
+  {
+    "id": "df204257-d0e2-4e14-984b-8fa1625a7325",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Col·leccions exposicions i programació dels Museus de Sitges",
+    "number": 2
+  },
+  {
+    "id": "d3a422b0-7f92-4cdc-a710-9d3c72548784",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Mediació cultural museus i escoles",
+    "number": 3
+  },
+  {
+    "id": "478dd7fc-f14c-4189-b54b-27e8b247355a",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Canals de comunicació i llenguatge no sexista",
+    "number": 4
+  },
+  {
+    "id": "cabb30db-6f87-4c18-b56c-c3bf85dca1b5",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Elaboració de materials de difusió",
+    "number": 5
+  },
+  {
+    "id": "be692215-af36-4b96-9a92-1a40ff7ffa89",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "El museu com a servei públic",
+    "number": 6
+  },
+  {
+    "id": "d0ebfcf3-a92c-4836-aa66-3a1fdf6c50c5",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Museus en entorns turístics",
+    "number": 7
+  },
+  {
+    "id": "318c3c9b-e9b4-4b31-bda8-7735407c1c9b",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Estudis d’audiències als museus",
+    "number": 8
+  },
+  {
+    "id": "c82b51c7-f070-4291-aa6f-974d6a5075a5",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Segmentació de públics",
+    "number": 9
+  },
+  {
+    "id": "b413ae5d-12cc-498b-b48f-3fe604699d19",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Accessibilitat públics i diversitat",
+    "number": 10
+  },
+  {
+    "id": "fa5e2fa4-643d-45a2-b691-fea1ca9033ef",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Comunicació al museu",
+    "number": 11
+  },
+  {
+    "id": "4d1ef180-712d-4094-9813-36bdc174d9a7",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Col·laboració participació i cocreació",
+    "number": 12
+  },
+  {
+    "id": "f511af99-cad4-4425-aa34-b593dffdf9f3",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Ètica professional drets i deures",
+    "number": 13
+  },
+  {
+    "id": "23fe52b6-cbea-469e-93d4-be42648ebc99",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Eines de gestió d’entrades",
+    "number": 14
+  },
+  {
+    "id": "79fca345-4a62-4485-ae08-80a6883437e2",
+    "exam": "084f73a9-3cfa-4830-8a9b-a5e90c395502",
+    "name": "Gestió operativa dels serveis públics",
+    "number": 15
+  }
+]
