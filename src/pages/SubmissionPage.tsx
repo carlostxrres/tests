@@ -1,10 +1,10 @@
 import { ArrowLeftIcon, ClipboardListIcon } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { ExamUnitBreadcrumb } from "@/components/ExamUnitBreadcrumb";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
 import { QuestionOptions } from "@/components/QuestionOptions";
 import { ResultBadge } from "@/components/ResultBadge";
-import { Button } from "@/components/ui/button";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "@/components/ui/empty";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDateTime } from "@/lib/datetime";
@@ -17,10 +17,10 @@ export function SubmissionPage() {
   const question = useQuestion(submission.data?.question_id);
 
   const back = (
-    <Button variant="ghost" size="sm" className="-ml-2 w-fit" render={<Link to="/submissions" />}>
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/submissions">
       <ArrowLeftIcon data-icon="inline-start" />
       Respuestas
-    </Button>
+    </LinkButton>
   );
 
   if (submission.isPending || (submission.data && question.isPending)) {
@@ -96,9 +96,9 @@ export function SubmissionPage() {
             <p>{q.explanation}</p>
           </div>
         </section>
-        <Button variant="outline" className="w-fit" render={<Link to={`/questions/${q.id}`} />}>
+        <LinkButton variant="outline" className="w-fit" to={`/questions/${q.id}`}>
           Ver pregunta y su historial
-        </Button>
+        </LinkButton>
       </div>
     </>
   );

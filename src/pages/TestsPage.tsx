@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { DataTable } from "@/components/data-table/DataTable";
 import { DataTableColumnHeader } from "@/components/data-table/DataTableColumnHeader";
 import type { DataTableFeatures } from "@/components/data-table/features";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
 import { TestActionsMenu } from "@/components/TestActionsMenu";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Empty,
   EmptyDescription,
@@ -118,10 +118,10 @@ const inProgressColumns = columnHelper.columns([
     header: "",
     cell: ({ row }) => (
       <div className="flex items-center justify-end gap-1">
-        <Button size="sm" render={<Link to={`/tests/${row.original.id}`} />}>
+        <LinkButton size="sm" to={`/tests/${row.original.id}`}>
           <PlayIcon data-icon="inline-start" />
           Continuar
-        </Button>
+        </LinkButton>
         <TestActionsMenu test={row.original} />
       </div>
     ),
@@ -153,14 +153,10 @@ const finishedColumns = columnHelper.columns([
     header: "",
     cell: ({ row }) => (
       <div className="flex items-center justify-end gap-1">
-        <Button
-          variant="outline"
-          size="sm"
-          render={<Link to={`/tests/${row.original.id}?questionIndex=-1`} />}
-        >
+        <LinkButton variant="outline" size="sm" to={`/tests/${row.original.id}?questionIndex=-1`}>
           <EyeIcon data-icon="inline-start" />
           Ver detalle
-        </Button>
+        </LinkButton>
         <TestActionsMenu test={row.original} />
       </div>
     ),
@@ -177,10 +173,10 @@ export function TestsPage() {
       <PageHeader
         title="Tests"
         actions={
-          <Button size="lg" render={<Link to="/tests/new" />}>
+          <LinkButton size="lg" to="/tests/new">
             <PlusIcon data-icon="inline-start" />
             Nuevo test
-          </Button>
+          </LinkButton>
         }
       />
       <div className="flex flex-col gap-8 px-4">
@@ -209,10 +205,10 @@ export function TestsPage() {
                       <EmptyTitle>Ningún test a medias</EmptyTitle>
                       <EmptyDescription>Empieza uno nuevo cuando quieras.</EmptyDescription>
                     </EmptyHeader>
-                    <Button variant="outline" size="sm" render={<Link to="/tests/new" />}>
+                    <LinkButton variant="outline" size="sm" to="/tests/new">
                       <PlusIcon data-icon="inline-start" />
                       Nuevo test
-                    </Button>
+                    </LinkButton>
                   </Empty>
                 }
               />

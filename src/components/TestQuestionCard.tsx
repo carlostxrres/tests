@@ -76,7 +76,7 @@ export function TestQuestionCard({
         onSubmit={(e) => e.preventDefault()}
         className="gap-3"
       >
-        <QuestionnaireItem name={question.id} disabled={!editable}>
+        <QuestionnaireItem name={question.id}>
           <QuestionnaireTitle className="text-lg leading-snug font-medium">
             {question.statement}
           </QuestionnaireTitle>

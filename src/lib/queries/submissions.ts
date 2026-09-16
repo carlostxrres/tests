@@ -31,10 +31,14 @@ export function useSubmissions(filters: SubmissionFilters) {
   });
 }
 
-async function fetchSubmission(id: string): Promise<SubmissionView> {
-  const { data, error } = await supabase.from("submissions_view").select("*").eq("id", id).single();
+async function fetchSubmission(id: string): Promise<SubmissionView | null> {
+  const { data, error } = await supabase
+    .from("submissions_view")
+    .select("*")
+    .eq("id", id)
+    .maybeSingle();
   if (error) throw error;
-  return data as SubmissionView;
+  return data as SubmissionView | null;
 }
 
 export function useSubmission(id: string | undefined) {

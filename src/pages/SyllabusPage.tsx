@@ -1,6 +1,7 @@
 import { BookOpenIcon, ChevronRightIcon } from "lucide-react";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
 import {
   Accordion,
@@ -9,7 +10,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Empty,
@@ -64,13 +64,13 @@ export function SyllabusPage() {
                   {exam.units.length} unidades · {total} preguntas
                 </CardDescription>
                 <CardAction>
-                  <Button variant="outline" size="sm" render={<Link to={`/syllabus/${exam.id}`} />}>
+                  <LinkButton variant="outline" size="sm" to={`/syllabus/${exam.id}`}>
                     Detalle
                     <ChevronRightIcon data-icon="inline-end" />
-                  </Button>
+                  </LinkButton>
                 </CardAction>
               </CardHeader>
-              <Accordion className="px-6 pb-2">
+              <Accordion className="px-6 pb-2" defaultValue={["units"]}>
                 <AccordionItem value="units">
                   <AccordionTrigger>Unidades</AccordionTrigger>
                   <AccordionContent>

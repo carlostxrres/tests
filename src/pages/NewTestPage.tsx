@@ -1,7 +1,8 @@
 import { useForm, useStore } from "@tanstack/react-form";
 import { ArrowLeftIcon, ArrowRightIcon, CheckIcon, PlayIcon, ZapIcon } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -175,10 +176,10 @@ function NewTestWizard({
     <>
       <PageHeader
         eyebrow={
-          <Button variant="ghost" size="sm" className="-ml-2 w-fit" render={<Link to="/tests" />}>
+          <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/tests">
             <ArrowLeftIcon data-icon="inline-start" />
             Tests
-          </Button>
+          </LinkButton>
         }
         title="Nuevo test"
         description={

@@ -51,6 +51,14 @@ export function DataTable<TData extends RowData>({
 
   const rows = table.getRowModel().rows;
 
+  if (data.length === 0) {
+    return (
+      <div className={cn("rounded-xl border bg-card", className)}>
+        {empty ?? <p className="p-6 text-center text-sm text-muted-foreground">Sin resultados.</p>}
+      </div>
+    );
+  }
+
   return (
     <div className={cn("flex flex-col gap-3", className)}>
       <div className="overflow-x-auto rounded-xl border bg-card">
@@ -67,25 +75,15 @@ export function DataTable<TData extends RowData>({
             ))}
           </TableHeader>
           <TableBody>
-            {rows.length ? (
-              rows.map((row) => (
-                <TableRow key={row.id}>
-                  {row.getAllCells().map((cell) => (
-                    <TableCell key={cell.id} className="align-top">
-                      <table.FlexRender cell={cell} />
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell colSpan={columns.length} className="p-0">
-                  {empty ?? (
-                    <p className="p-6 text-center text-sm text-muted-foreground">Sin resultados.</p>
-                  )}
-                </TableCell>
+            {rows.map((row) => (
+              <TableRow key={row.id}>
+                {row.getAllCells().map((cell) => (
+                  <TableCell key={cell.id} className="align-top">
+                    <table.FlexRender cell={cell} />
+                  </TableCell>
+                ))}
               </TableRow>
-            )}
+            ))}
           </TableBody>
         </Table>
       </div>

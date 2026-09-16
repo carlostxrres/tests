@@ -2,8 +2,8 @@ import { ArrowLeftIcon, CircleHelpIcon, HistoryIcon } from "lucide-react";
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { CorrectRatioChart } from "@/components/CorrectRatioChart";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
-import { Button } from "@/components/ui/button";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "@/components/ui/empty";
 import {
   Item,
@@ -33,10 +33,10 @@ export function ExamPage() {
   const statsByUnit = useMemo(() => aggregateBy(stats.data, (s) => s.unit_id), [stats.data]);
 
   const back = (
-    <Button variant="ghost" size="sm" className="-ml-2 w-fit" render={<Link to="/syllabus" />}>
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/syllabus">
       <ArrowLeftIcon data-icon="inline-start" />
       Temario
-    </Button>
+    </LinkButton>
   );
 
   if (exam.isPending) {

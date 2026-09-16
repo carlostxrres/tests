@@ -42,23 +42,6 @@ const statusOptions = [
 const columnHelper = createColumnHelper<DataTableFeatures, QuestionRow>();
 
 const columns = columnHelper.columns([
-  columnHelper.accessor("examName", {
-    id: "exam",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
-    cell: ({ getValue }) => <span className="text-xs text-muted-foreground">{getValue()}</span>,
-    sortFn: "text",
-  }),
-  columnHelper.accessor("unitNumber", {
-    id: "unit",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
-    cell: ({ row }) => (
-      <span className="block min-w-32 text-xs">
-        <span className="font-mono text-muted-foreground">{row.original.unitNumber}.</span>{" "}
-        {row.original.unitName}
-      </span>
-    ),
-    sortFn: "basic",
-  }),
   columnHelper.accessor("statement", {
     id: "statement",
     header: "Pregunta",
@@ -71,6 +54,25 @@ const columns = columnHelper.columns([
         {getValue()}
       </Link>
     ),
+  }),
+  columnHelper.accessor("unitNumber", {
+    id: "unit",
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
+    cell: ({ row }) => (
+      <span className="block max-w-40 truncate text-xs" title={row.original.unitName}>
+        <span className="font-mono text-muted-foreground">{row.original.unitNumber}.</span>{" "}
+        {row.original.unitName}
+      </span>
+    ),
+    sortFn: "basic",
+  }),
+  columnHelper.accessor("examName", {
+    id: "exam",
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
+    cell: ({ getValue }) => (
+      <span className="block max-w-32 truncate text-xs text-muted-foreground">{getValue()}</span>
+    ),
+    sortFn: "text",
   }),
   columnHelper.accessor("ratio", {
     id: "ratio",

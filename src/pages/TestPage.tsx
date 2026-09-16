@@ -2,6 +2,7 @@ import { ArrowLeftIcon, CheckCircleIcon, LayersIcon, TrophyIcon } from "lucide-r
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { CorrectRatioChart } from "@/components/CorrectRatioChart";
+import { LinkButton } from "@/components/LinkButton";
 import { TestActionsMenu } from "@/components/TestActionsMenu";
 import { TestQuestionCard } from "@/components/TestQuestionCard";
 import { Badge } from "@/components/ui/badge";
@@ -54,10 +55,10 @@ export function TestPage() {
             <EmptyTitle>Test no encontrado</EmptyTitle>
             <EmptyDescription>Puede que se haya eliminado.</EmptyDescription>
           </EmptyHeader>
-          <Button variant="outline" render={<Link to="/tests" />}>
+          <LinkButton variant="outline" to="/tests">
             <ArrowLeftIcon data-icon="inline-start" />
             Volver a tests
-          </Button>
+          </LinkButton>
         </Empty>
       </div>
     );
@@ -104,6 +105,9 @@ function TestRunner({ test }: { test: TestWithStats }) {
   );
 
   // Whichever section covers most of the viewport becomes the current index.
+  // `finished` is a dependency on purpose: the summary section appears when the
+  // test ends and must be observed too.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: see above
   useEffect(() => {
     const root = scrollerRef.current;
     if (!root || !questions.data) return;
@@ -124,9 +128,10 @@ function TestRunner({ test }: { test: TestWithStats }) {
     );
     for (const s of sections) observer.observe(s);
     return () => observer.disconnect();
-  }, [questions.data, setIndexParam]);
+  }, [questions.data, finished, setIndexParam]);
 
   // Navigating via the URL (grid squares, "Ver detalle") scrolls to the section.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: re-run when the summary section mounts
   useEffect(() => {
     if (!questions.data || observedIndexRef.current === paramIndex) return;
     const target = scrollerRef.current?.querySelector<HTMLElement>(
@@ -137,7 +142,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
       observedIndexRef.current = paramIndex;
       target.scrollIntoView({ block: "start", behavior: firstScroll ? "instant" : "smooth" });
     }
-  }, [paramIndex, questions.data]);
+  }, [paramIndex, questions.data, finished]);
 
   // Scroll the active square into view inside the grid strip.
   const gridRef = useRef<HTMLElement>(null);
@@ -189,9 +194,9 @@ function TestRunner({ test }: { test: TestWithStats }) {
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 0.5rem)" }}
       >
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon-sm" aria-label="Salir" render={<Link to="/tests" />}>
+          <LinkButton variant="ghost" size="icon-sm" aria-label="Salir" to="/tests">
             <ArrowLeftIcon />
-          </Button>
+          </LinkButton>
           <div className="flex min-w-0 flex-1 flex-col">
             <h1 className="truncate font-heading text-base font-semibold">{test.name ?? "Test"}</h1>
             <p className="truncate text-xs text-muted-foreground">

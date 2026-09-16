@@ -63,23 +63,6 @@ const columns = columnHelper.columns([
     enableSorting: false,
     cell: ({ getValue }) => <ResultBadge result={getValue()} />,
   }),
-  columnHelper.accessor("exam_name", {
-    id: "exam",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
-    cell: ({ getValue }) => <span className="text-xs text-muted-foreground">{getValue()}</span>,
-    sortFn: "text",
-  }),
-  columnHelper.accessor("unit_number", {
-    id: "unit",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
-    cell: ({ row }) => (
-      <span className="block min-w-32 text-xs">
-        <span className="font-mono text-muted-foreground">{row.original.unit_number}.</span>{" "}
-        {row.original.unit_name}
-      </span>
-    ),
-    sortFn: "basic",
-  }),
   columnHelper.accessor("statement", {
     id: "statement",
     header: "Pregunta",
@@ -92,6 +75,23 @@ const columns = columnHelper.columns([
         {getValue()}
       </Link>
     ),
+  }),
+  columnHelper.accessor("exam_name", {
+    id: "exam",
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
+    cell: ({ getValue }) => <span className="text-xs text-muted-foreground">{getValue()}</span>,
+    sortFn: "text",
+  }),
+  columnHelper.accessor("unit_number", {
+    id: "unit",
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
+    cell: ({ row }) => (
+      <span className="block max-w-40 truncate text-xs" title={row.original.unit_name}>
+        <span className="font-mono text-muted-foreground">{row.original.unit_number}.</span>{" "}
+        {row.original.unit_name}
+      </span>
+    ),
+    sortFn: "basic",
   }),
   columnHelper.display({
     id: "actions",

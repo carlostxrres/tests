@@ -22,14 +22,14 @@ export function useQuestionIndex() {
 
 export type QuestionDetail = Question & { unit: Unit & { exam: Exam } };
 
-async function fetchQuestion(id: string): Promise<QuestionDetail> {
+async function fetchQuestion(id: string): Promise<QuestionDetail | null> {
   const { data, error } = await supabase
     .from("questions")
     .select("*, unit:units(*, exam:exams(*))")
     .eq("id", id)
-    .single();
+    .maybeSingle();
   if (error) throw error;
-  return data as QuestionDetail;
+  return data as QuestionDetail | null;
 }
 
 export function useQuestion(id: string | undefined) {

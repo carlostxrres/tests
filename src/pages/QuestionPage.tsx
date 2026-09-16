@@ -2,10 +2,10 @@ import { ArrowLeftIcon, HistoryIcon } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { CorrectRatioChart } from "@/components/CorrectRatioChart";
 import { ExamUnitBreadcrumb } from "@/components/ExamUnitBreadcrumb";
+import { LinkButton } from "@/components/LinkButton";
 import { PageHeader } from "@/components/PageHeader";
 import { QuestionOptions } from "@/components/QuestionOptions";
 import { ResultBadge, resultLabels } from "@/components/ResultBadge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "@/components/ui/empty";
 import { Separator } from "@/components/ui/separator";
@@ -21,10 +21,10 @@ export function QuestionPage() {
   const submissions = useSubmissions({ question: id });
 
   const back = (
-    <Button variant="ghost" size="sm" className="-ml-2 w-fit" render={<Link to="/questions" />}>
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/questions">
       <ArrowLeftIcon data-icon="inline-start" />
       Preguntas
-    </Button>
+    </LinkButton>
   );
 
   if (question.isPending) {

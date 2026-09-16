@@ -31,13 +31,15 @@ export function useTests() {
   return useQuery({ queryKey: queryKeys.tests, queryFn: fetchTests });
 }
 
-async function fetchTest(id: string): Promise<TestWithStats> {
+// Resolves to null when the test doesn't exist (or isn't the user's).
+async function fetchTest(id: string): Promise<TestWithStats | null> {
   const [test, stats] = await Promise.all([
-    supabase.from("tests").select("*").eq("id", id).single(),
+    supabase.from("tests").select("*").eq("id", id).maybeSingle(),
     supabase.from("test_stats").select("*").eq("test_id", id).maybeSingle(),
   ]);
   if (test.error) throw test.error;
   if (stats.error) throw stats.error;
+  if (!test.data) return null;
   return { ...test.data, stats: (stats.data as TestStats | null) ?? emptyStats(test.data) };
 }
 
