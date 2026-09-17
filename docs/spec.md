@@ -30,19 +30,14 @@ redirigen a su equivalente bajo `/explore` conservando los query params.
 
 ### /explore/syllabus
 
-La lista de `exams` y sus `units`.
+La lista de `exams`. Cada examen es una tarjeta con un acordeón de sus `units`
+(ordenados por `unit.number`). Dentro de cada `unit`, se muestra:
 
-### /explore/syllabus/:id
-
-El detalle de un examen. Se muestra:
-
-- El `exam.name`.
-- El temario (la lista de `units` para este examen, ordenados por `unit.number`). Dentro de cada `unit`, se muestra:
-  - El `unit.number`.
-  - El `unit.name`.
-  - La cantidad de `questions` de ese unit. Es un link a algo como `/explore/questions?unit=:unit.id`
-  - La cantidad de `submissions` de ese unit.
-  - El ratio de `submissions` correctas de ese unit. En gráfico (de tarta?)
+- El `unit.number`.
+- El `unit.name`.
+- La cantidad de `questions` de ese unit. Es un link a algo como `/explore/questions?unit=:unit.id`
+- La cantidad de `submissions` de ese unit. Es un link a algo como `/explore/submissions?unit=:unit.id`
+- El ratio de `submissions` correctas de ese unit. En gráfico (de tarta).
 
 ### /explore/questions
 

@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/breadcrumb";
 
 type Props = {
-  examId: string;
   examName: string;
   unitId?: string;
   unitNumber?: number;
@@ -18,24 +17,14 @@ type Props = {
   current?: string;
 };
 
-// "Examen › 3. Unidad › Pregunta" — the exam links to its syllabus page and
-// the unit to its filtered question list.
-export function ExamUnitBreadcrumb({
-  examId,
-  examName,
-  unitId,
-  unitNumber,
-  unitName,
-  current,
-}: Props) {
+// "Examen › 3. Unidad › Pregunta" — the exam has no detail page of its own
+// (its content lives inline in /explore/syllabus's accordion), so only the
+// unit links to its filtered question list.
+export function ExamUnitBreadcrumb({ examName, unitId, unitNumber, unitName, current }: Props) {
   return (
     <Breadcrumb>
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink render={<Link to={`/explore/syllabus/${examId}`} />}>
-            {examName}
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+        <BreadcrumbItem>{examName}</BreadcrumbItem>
         {unitId && (
           <>
             <BreadcrumbSeparator />

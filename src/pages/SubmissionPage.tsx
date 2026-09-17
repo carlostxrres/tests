@@ -63,7 +63,6 @@ export function SubmissionPage() {
           <div className="flex flex-col gap-2">
             {back}
             <ExamUnitBreadcrumb
-              examId={s.exam_id}
               examName={s.exam_name}
               unitId={s.unit_id}
               unitNumber={s.unit_number}

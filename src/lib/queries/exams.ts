@@ -16,8 +16,3 @@ async function fetchExams(): Promise<ExamWithUnits[]> {
 export function useExams() {
   return useQuery({ queryKey: queryKeys.exams, queryFn: fetchExams, staleTime: Infinity });
 }
-
-export function useExam(id: string | undefined) {
-  const query = useExams();
-  return { ...query, data: id ? query.data?.find((e) => e.id === id) : undefined };
-}
