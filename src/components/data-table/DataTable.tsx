@@ -61,7 +61,10 @@ export function DataTable<TData extends RowData>({
 
   return (
     <div className={cn("flex flex-col gap-3", className)}>
-      <div className="overflow-x-auto rounded-xl border bg-card">
+      {/* The inner [data-slot=table-container] from ui/table.tsx is what scrolls
+          (it is w-full, so it can never overflow this div); this one only clips
+          the table's corners. */}
+      <div className="overflow-hidden rounded-xl border bg-card">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

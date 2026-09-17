@@ -267,7 +267,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
           {/* Question grid: one square per question, linked to its section. */}
           <nav
             ref={gridRef}
-            className="grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1"
+            className="scrollbar-subtle grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1"
             aria-label="Preguntas"
           >
             {test.question_ids.map((questionId, index) => {
@@ -305,7 +305,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
       {/* ---- snap-scrolling questions ---------------------------------------- */}
       <div
         ref={scrollerRef}
-        className="min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-contain"
+        className="scrollbar-subtle min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-contain"
       >
         {isLoading || !questions.data ? (
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-3 p-4">
