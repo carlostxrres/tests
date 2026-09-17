@@ -8,6 +8,7 @@ import { DataTableColumnHeader } from "@/components/data-table/DataTableColumnHe
 import type { DataTableFeatures } from "@/components/data-table/features";
 import { ResultBadge } from "@/components/ResultBadge";
 import { StatusSelect } from "@/components/StatusSelect";
+import { UnitCombobox } from "@/components/UnitCombobox";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -31,6 +32,7 @@ import {
 } from "@/components/ui/input-group";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDateTime } from "@/lib/datetime";
+import { useExams } from "@/lib/queries/exams";
 import { useSubmissions } from "@/lib/queries/submissions";
 import { normalize } from "@/lib/question-rows";
 import { useUrlFilters } from "@/lib/search-params";
@@ -122,14 +124,16 @@ const columns = columnHelper.columns([
 ]);
 
 export function SubmissionsPage() {
+  const exams = useExams();
   const { get, patch } = useUrlFilters();
   const q = get("q");
   const result = get("result") as Result | "";
   const from = get("from");
   const to = get("to");
   const question = get("question");
+  const unit = get("unit");
 
-  const submissions = useSubmissions({ result, from, to, question });
+  const submissions = useSubmissions({ result, from, to, question, unit });
 
   const filtered = useMemo(() => {
     const rows = submissions.data ?? [];
@@ -140,7 +144,7 @@ export function SubmissionsPage() {
     );
   }, [submissions.data, q]);
 
-  const hasFilters = Boolean(q || result || from || to || question);
+  const hasFilters = Boolean(q || result || from || to || question || unit);
 
   return (
     <div className="flex flex-col gap-3 px-4">
@@ -168,6 +172,12 @@ export function SubmissionsPage() {
           )}
         </InputGroup>
         <div className="flex gap-2">
+          <UnitCombobox
+            exams={exams.data}
+            value={unit}
+            onValueChange={(next) => patch({ unit: next })}
+            className="min-w-0 flex-1"
+          />
           <StatusSelect
             aria-label="Resultado"
             value={result}
@@ -176,14 +186,13 @@ export function SubmissionsPage() {
             placeholder="Resultado"
             className="w-36"
           />
-          <DateRangePicker
-            from={from}
-            to={to}
-            onChange={(range) => patch({ from: range.from, to: range.to })}
-            className="min-w-0 flex-1"
-          />
         </div>
       </div>
+      <DateRangePicker
+        from={from}
+        to={to}
+        onChange={(range) => patch({ from: range.from, to: range.to })}
+      />
       {question && (
         <Button
           variant="secondary"
@@ -228,7 +237,14 @@ export function SubmissionsPage() {
                   variant="outline"
                   size="sm"
                   onClick={() =>
-                    patch({ q: null, result: null, from: null, to: null, question: null })
+                    patch({
+                      q: null,
+                      result: null,
+                      from: null,
+                      to: null,
+                      question: null,
+                      unit: null,
+                    })
                   }
                 >
                   Quitar filtros

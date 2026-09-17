@@ -8,6 +8,7 @@ export type SubmissionFilters = {
   from?: string; // ISO date (yyyy-mm-dd)
   to?: string; // ISO date (yyyy-mm-dd), inclusive
   question?: string;
+  unit?: string;
 };
 
 async function fetchSubmissions(filters: SubmissionFilters): Promise<SubmissionView[]> {
@@ -17,6 +18,7 @@ async function fetchSubmissions(filters: SubmissionFilters): Promise<SubmissionV
     .order("timestamp", { ascending: false });
   if (filters.result) query = query.eq("result", filters.result);
   if (filters.question) query = query.eq("question_id", filters.question);
+  if (filters.unit) query = query.eq("unit_id", filters.unit);
   if (filters.from) query = query.gte("timestamp", `${filters.from}T00:00:00`);
   if (filters.to) query = query.lte("timestamp", `${filters.to}T23:59:59.999`);
   const { data, error } = await query;
