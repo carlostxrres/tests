@@ -21,7 +21,7 @@ export function QuestionPage() {
   const submissions = useSubmissions({ question: id });
 
   const back = (
-    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/questions">
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/explore/questions">
       <ArrowLeftIcon data-icon="inline-start" />
       Preguntas
     </LinkButton>
@@ -103,7 +103,7 @@ export function QuestionPage() {
                 "Todavía no has respondido esta pregunta."
               ) : (
                 <Link
-                  to={`/submissions?question=${q.id}`}
+                  to={`/explore/submissions?question=${q.id}`}
                   className="underline-offset-4 hover:underline"
                 >
                   {history.length} {history.length === 1 ? "respuesta" : "respuestas"}
@@ -125,7 +125,7 @@ export function QuestionPage() {
                 {history.map((s) => (
                   <li key={s.id} className={cn("contents")}>
                     <Link
-                      to={`/submissions/${s.id}`}
+                      to={`/explore/submissions/${s.id}`}
                       title={`${resultLabels[s.result]} · ${formatDateTime(s.timestamp)}`}
                     >
                       <ResultBadge result={s.result} iconOnly />

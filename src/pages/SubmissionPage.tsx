@@ -17,7 +17,7 @@ export function SubmissionPage() {
   const question = useQuestion(submission.data?.question_id);
 
   const back = (
-    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/submissions">
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/explore/submissions">
       <ArrowLeftIcon data-icon="inline-start" />
       Respuestas
     </LinkButton>
@@ -96,7 +96,7 @@ export function SubmissionPage() {
             <p>{q.explanation}</p>
           </div>
         </section>
-        <LinkButton variant="outline" className="w-fit" to={`/questions/${q.id}`}>
+        <LinkButton variant="outline" className="w-fit" to={`/explore/questions/${q.id}`}>
           Ver pregunta y su historial
         </LinkButton>
       </div>

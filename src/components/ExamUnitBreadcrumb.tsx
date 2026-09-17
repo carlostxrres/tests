@@ -32,13 +32,15 @@ export function ExamUnitBreadcrumb({
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink render={<Link to={`/syllabus/${examId}`} />}>{examName}</BreadcrumbLink>
+          <BreadcrumbLink render={<Link to={`/explore/syllabus/${examId}`} />}>
+            {examName}
+          </BreadcrumbLink>
         </BreadcrumbItem>
         {unitId && (
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink render={<Link to={`/questions?unit=${unitId}`} />}>
+              <BreadcrumbLink render={<Link to={`/explore/questions?unit=${unitId}`} />}>
                 {unitNumber}. {unitName}
               </BreadcrumbLink>
             </BreadcrumbItem>

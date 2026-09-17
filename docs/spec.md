@@ -8,19 +8,31 @@ La app debería ser "instalable como app en el móvil" (es decir, que Chrome te 
 
 Estas pestañas abajo, con gran área de toque, bien accesibles para el pulgar:
 
-- Temario (/syllabus)
-- Preguntas (/questions)
+- Explorar (/explore)
 - Tests (/tests)
-- Respuestas (/submissions)
 - Ajustes (/settings)
+
+Temario, Preguntas y Respuestas son tres vistas del mismo material, así que viven
+dentro de `/explore` como pestañas en vez de ocupar tres huecos de la barra:
+
+- Temario (/explore/syllabus)
+- Preguntas (/explore/questions)
+- Respuestas (/explore/submissions)
+
+Las pestañas son navegación, no estado de cliente: cada una es un `<Link>` a su
+ruta, de modo que los deep links con filtros (`/explore/questions?unit=:id`)
+siguen funcionando y el botón atrás cambia de pestaña. Las páginas de detalle
+(`/explore/*/:id`) se muestran a pantalla completa, sin la barra de pestañas.
+Las URLs antiguas (`/syllabus`, `/questions`, `/submissions` y sus sub-rutas)
+redirigen a su equivalente bajo `/explore` conservando los query params.
 
 ## Pages
 
-### /syllabus
+### /explore/syllabus
 
 La lista de `exams` y sus `units`.
 
-### /syllabus/:id
+### /explore/syllabus/:id
 
 El detalle de un examen. Se muestra:
 
@@ -28,11 +40,11 @@ El detalle de un examen. Se muestra:
 - El temario (la lista de `units` para este examen, ordenados por `unit.number`). Dentro de cada `unit`, se muestra:
   - El `unit.number`.
   - El `unit.name`.
-  - La cantidad de `questions` de ese unit. Es un link a algo como `/questions?unit=:unit.id`
+  - La cantidad de `questions` de ese unit. Es un link a algo como `/explore/questions?unit=:unit.id`
   - La cantidad de `submissions` de ese unit.
   - El ratio de `submissions` correctas de ese unit. En gráfico (de tarta?)
 
-### /questions
+### /explore/questions
 
 La lista de `questions` en una [Data Table](https://ui.shadcn.com/docs/components/base/data-table).
 
@@ -53,7 +65,7 @@ Con filtros:
 
 Los filtros se sincronizan con URL query params.
 
-### /questions/:id
+### /explore/questions/:id
 
 Detalle de la pregunta. Se muestra:
 
@@ -62,10 +74,10 @@ Detalle de la pregunta. Se muestra:
 - El `question.statement`.
 - Los `question.options`. La `question.correctOption` aparece destacada.
 - El `question.explanation`.
-- La cantidad de `submissions` de esa question. Es un link a algo como `/submissions?question=:question.id`.
+- La cantidad de `submissions` de esa question. Es un link a algo como `/explore/submissions?question=:question.id`.
 - Si tiene `submissions`, un gráfico de cómo ha ido (to do: pensar qué podemos mostrar).
 
-### /submissions
+### /explore/submissions
 
 La lista de `submissions` en una [Data Table](https://ui.shadcn.com/docs/components/base/data-table).
 
@@ -77,7 +89,7 @@ Con las siguientes columnas:
 - El `unit.number` y `unit.name` (sortable).
 - El `question.statement`.
 - Row actions. Es un dropdown con:
-  - Link a `/submissions/:id`
+  - Link a `/explore/submissions/:id`
 
 Con filtros:
 
@@ -87,7 +99,7 @@ Con filtros:
 
 Los filtros se sincronizan con URL query params.
 
-### /submissions/:id
+### /explore/submissions/:id
 
 - El `submission.timestamp` (como fecha y hora legibles).
 - El `submission.choice` fue correcto o incorrecto (o null, lo que significa que el usuario no respondió).
