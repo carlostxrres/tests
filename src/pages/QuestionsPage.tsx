@@ -45,6 +45,8 @@ const columns = columnHelper.columns([
     id: "statement",
     header: "Pregunta",
     enableSorting: false,
+    // Rows are unidentifiable without it.
+    enableHiding: false,
     cell: ({ row, getValue }) => (
       <Link
         to={`/explore/questions/${row.original.id}`}
@@ -56,7 +58,8 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("unitNumber", {
     id: "unit",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
+    meta: { label: "Unidad" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ row }) => (
       <span className="block max-w-40 truncate text-xs" title={row.original.unitName}>
         <span className="font-mono text-muted-foreground">{row.original.unitNumber}.</span>{" "}
@@ -67,7 +70,8 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("examName", {
     id: "exam",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
+    meta: { label: "Examen" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => (
       <span className="block max-w-32 truncate text-xs text-muted-foreground">{getValue()}</span>
     ),
@@ -75,7 +79,8 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("ratio", {
     id: "ratio",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Aciertos" />,
+    meta: { label: "Aciertos" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ row }) => (
       <span className="inline-flex items-center gap-1.5 font-mono text-xs tabular-nums">
         {formatRatio(row.original.ratio)}
@@ -87,13 +92,15 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("submissions", {
     id: "submissions",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Respuestas" />,
+    meta: { label: "Respuestas" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => <span className="font-mono text-xs tabular-nums">{getValue()}</span>,
     sortFn: "basic",
   }),
   columnHelper.accessor("lastSubmissionAt", {
     id: "last",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Última" />,
+    meta: { label: "Última" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => {
       const value = getValue();
       return (
@@ -186,6 +193,7 @@ export function QuestionsPage() {
         </div>
       ) : (
         <DataTable
+          tableId="questions"
           columns={columns}
           data={filtered}
           getRowId={(row) => row.id}

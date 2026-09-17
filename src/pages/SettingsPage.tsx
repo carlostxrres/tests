@@ -1,4 +1,12 @@
-import { LogOutIcon, MonitorIcon, MoonIcon, SunIcon, Trash2Icon, UserIcon } from "lucide-react";
+import {
+  ExternalLinkIcon,
+  LogOutIcon,
+  MonitorIcon,
+  MoonIcon,
+  SunIcon,
+  Trash2Icon,
+  UserIcon,
+} from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
@@ -17,6 +25,8 @@ import { type Theme, useTheme } from "@/hooks/useTheme";
 import { useResetUserData } from "@/lib/queries/tests";
 import { supabase } from "@/lib/supabase";
 import { notify, notifyError } from "@/lib/toast";
+
+const REPO_URL = "https://github.com/carlostxrres/tests";
 
 const themes: { value: Theme; label: string; icon: typeof SunIcon }[] = [
   { value: "system", label: "Sistema", icon: MonitorIcon },
@@ -87,6 +97,25 @@ export function SettingsPage() {
               ))}
             </ButtonGroup>
           </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Acerca de</CardTitle>
+            <CardDescription>El código de la aplicación es abierto.</CardDescription>
+          </CardHeader>
+          <CardFooter>
+            {/* Base UI needs nativeButton={false} when the rendered element
+                isn't a <button>, same as LinkButton does for router links. */}
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<a href={REPO_URL} target="_blank" rel="noreferrer" />}
+            >
+              <ExternalLinkIcon data-icon="inline-start" />
+              Ver en GitHub
+            </Button>
+          </CardFooter>
         </Card>
 
         <Card className="ring-destructive/30">

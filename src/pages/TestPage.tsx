@@ -37,7 +37,7 @@ export function TestPage() {
 
   if (test.isPending) {
     return (
-      <div className="flex h-dvh flex-col gap-4 p-4">
+      <div className="mx-auto flex h-dvh w-full max-w-3xl flex-col gap-4 p-4">
         <Skeleton className="h-24 w-full" />
         <Skeleton className="h-8 w-40" />
         <Skeleton className="h-14 w-full" />
@@ -49,7 +49,7 @@ export function TestPage() {
 
   if (!test.data) {
     return (
-      <div className="flex h-dvh items-center justify-center p-4">
+      <div className="mx-auto flex h-dvh w-full max-w-3xl items-center justify-center p-4">
         <Empty>
           <EmptyHeader>
             <EmptyTitle>Test no encontrado</EmptyTitle>
@@ -105,6 +105,9 @@ function TestRunner({ test }: { test: TestWithStats }) {
   );
 
   // Whichever section covers most of the viewport becomes the current index.
+  // The thresholds are spread out rather than a single 0.5: a section taller
+  // than twice the scroller can never reach a ratio of 0.5, so it would never
+  // fire and the index would silently stop updating on it.
   // `finished` is a dependency on purpose: the summary section appears when the
   // test ends and must be observed too.
   // biome-ignore lint/correctness/useExhaustiveDependencies: see above
@@ -112,19 +115,34 @@ function TestRunner({ test }: { test: TestWithStats }) {
     const root = scrollerRef.current;
     if (!root || !questions.data) return;
     const sections = Array.from(root.querySelectorAll<HTMLElement>("[data-question-index]"));
+    // A callback only carries the sections that just crossed a threshold, so
+    // the last known coverage of every section is kept to compare against.
+    const areaByIndex = new Map<number, number>();
     const observer = new IntersectionObserver(
       (entries) => {
-        const best = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!best) return;
-        const index = Number((best.target as HTMLElement).dataset.questionIndex);
-        if (observedIndexRef.current !== index) {
-          observedIndexRef.current = index;
-          setIndexParam(index);
+        for (const entry of entries) {
+          const { width, height } = entry.intersectionRect;
+          // Covered area, not intersectionRatio: the ratio is relative to the
+          // section's own height, so a long question filling the screen would
+          // lose to a short neighbour that is barely in view.
+          areaByIndex.set(
+            Number((entry.target as HTMLElement).dataset.questionIndex),
+            width * height,
+          );
         }
+        let best: number | null = null;
+        let bestArea = 0;
+        for (const [index, area] of areaByIndex) {
+          if (area > bestArea) {
+            best = index;
+            bestArea = area;
+          }
+        }
+        if (best === null || observedIndexRef.current === best) return;
+        observedIndexRef.current = best;
+        setIndexParam(best);
       },
-      { root, threshold: [0.5] },
+      { root, threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
     );
     for (const s of sections) observer.observe(s);
     return () => observer.disconnect();
@@ -190,120 +208,125 @@ function TestRunner({ test }: { test: TestWithStats }) {
     <div className="flex h-dvh flex-col bg-background">
       {/* ---- fixed header ---------------------------------------------------- */}
       <header
-        className="z-30 flex shrink-0 flex-col gap-2 border-b bg-background/95 px-4 pb-2 backdrop-blur"
+        className="z-30 shrink-0 border-b bg-background/95 px-4 pb-2 backdrop-blur"
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 0.5rem)" }}
       >
-        <div className="flex items-center gap-2">
-          <LinkButton variant="ghost" size="icon-sm" aria-label="Salir" to="/tests">
-            <ArrowLeftIcon />
-          </LinkButton>
-          <div className="flex min-w-0 flex-1 flex-col">
-            <h1 className="truncate font-heading text-base font-semibold">{test.name ?? "Test"}</h1>
-            <p className="truncate text-xs text-muted-foreground">
-              {formatDateTime(test.start)}
-              {test.end && ` → ${formatDateTime(test.end)}`}
-            </p>
+        {/* The border spans the viewport; the contents keep the 3xl column. */}
+        <div className="mx-auto flex w-full max-w-3xl flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <LinkButton variant="ghost" size="icon-sm" aria-label="Salir" to="/tests">
+              <ArrowLeftIcon />
+            </LinkButton>
+            <div className="flex min-w-0 flex-1 flex-col">
+              <h1 className="truncate font-heading text-base font-semibold">
+                {test.name ?? "Test"}
+              </h1>
+              <p className="truncate text-xs text-muted-foreground">
+                {formatDateTime(test.start)}
+                {test.end && ` → ${formatDateTime(test.end)}`}
+              </p>
+            </div>
+            <Drawer>
+              <DrawerTrigger render={<Button variant="outline" size="sm" />}>
+                <LayersIcon data-icon="inline-start" />
+                Unidades
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>Unidades del test</DrawerTitle>
+                  <DrawerDescription>
+                    {test.unit_ids.length} unidades · {total} preguntas
+                  </DrawerDescription>
+                </DrawerHeader>
+                <div className="flex flex-col gap-4 overflow-y-auto px-4 pb-6">
+                  {unitsByExam.map(({ exam, units }) => (
+                    <div key={exam.id} className="flex flex-col gap-2">
+                      <h3 className="font-heading text-sm font-semibold">{exam.name}</h3>
+                      <ItemGroup className="gap-1">
+                        {units.map((unit) => (
+                          <Item key={unit.id} size="xs" variant="muted">
+                            <ItemMedia className="w-6 justify-end font-mono text-xs text-muted-foreground">
+                              {unit.number}
+                            </ItemMedia>
+                            <ItemContent>
+                              <ItemTitle className="font-normal">{unit.name}</ItemTitle>
+                            </ItemContent>
+                          </Item>
+                        ))}
+                      </ItemGroup>
+                    </div>
+                  ))}
+                </div>
+              </DrawerContent>
+            </Drawer>
+            <TestActionsMenu test={test} inRunner />
           </div>
-          <Drawer>
-            <DrawerTrigger render={<Button variant="outline" size="sm" />}>
-              <LayersIcon data-icon="inline-start" />
-              Unidades
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerHeader>
-                <DrawerTitle>Unidades del test</DrawerTitle>
-                <DrawerDescription>
-                  {test.unit_ids.length} unidades · {total} preguntas
-                </DrawerDescription>
-              </DrawerHeader>
-              <div className="flex flex-col gap-4 overflow-y-auto px-4 pb-6">
-                {unitsByExam.map(({ exam, units }) => (
-                  <div key={exam.id} className="flex flex-col gap-2">
-                    <h3 className="font-heading text-sm font-semibold">{exam.name}</h3>
-                    <ItemGroup className="gap-1">
-                      {units.map((unit) => (
-                        <Item key={unit.id} size="xs" variant="muted">
-                          <ItemMedia className="w-6 justify-end font-mono text-xs text-muted-foreground">
-                            {unit.number}
-                          </ItemMedia>
-                          <ItemContent>
-                            <ItemTitle className="font-normal">{unit.name}</ItemTitle>
-                          </ItemContent>
-                        </Item>
-                      ))}
-                    </ItemGroup>
-                  </div>
-                ))}
-              </div>
-            </DrawerContent>
-          </Drawer>
-          <TestActionsMenu test={test} inRunner />
-        </div>
 
-        <div className="flex items-center gap-2 text-xs">
-          <Badge variant="secondary" className="font-mono tabular-nums">
-            {answered}/{total} respondidas
-          </Badge>
-          {reveal && (
-            <Badge
-              variant="outline"
-              className="border-success/30 font-mono text-success tabular-nums"
-            >
-              {correct}/{total} acertadas
+          <div className="flex items-center gap-2 text-xs">
+            <Badge variant="secondary" className="font-mono tabular-nums">
+              {answered}/{total} respondidas
             </Badge>
-          )}
-          {finished && unanswered > 0 && (
-            <Badge variant="outline" className="font-mono tabular-nums">
-              {unanswered} en blanco
-            </Badge>
-          )}
-          {answer.isPending && <Spinner className="ml-auto size-3.5" />}
-        </div>
-
-        {/* Question grid: one square per question, linked to its section. */}
-        <nav
-          ref={gridRef}
-          className="grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1"
-          aria-label="Preguntas"
-        >
-          {test.question_ids.map((questionId, index) => {
-            const s = submissionByQuestion.get(questionId);
-            const q = questions.data?.[index];
-            const result = s && reveal && q ? resultOf(s.choice, q.correct_option) : null;
-            const active = index === paramIndex;
-            return (
-              <Link
-                key={questionId}
-                to={`?questionIndex=${index}`}
-                replace
-                data-square={index}
-                aria-label={`Ir a la pregunta ${index + 1}`}
-                aria-current={active ? "step" : undefined}
-                className={cn(
-                  "flex h-6 items-center justify-center rounded-md border font-mono text-[11px] tabular-nums transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)]",
-                  !s && "bg-background text-muted-foreground",
-                  s && !result && "border-primary/40 bg-accent text-accent-foreground",
-                  result === "correct" && "border-success/40 bg-success/15 text-success",
-                  result === "incorrect" &&
-                    "border-destructive/40 bg-destructive/10 text-destructive",
-                  result === "unanswered" && "bg-muted text-muted-foreground",
-                  active && "-translate-y-0.5 scale-110 border-foreground shadow-sm",
-                )}
+            {reveal && (
+              <Badge
+                variant="outline"
+                className="border-success/30 font-mono text-success tabular-nums"
               >
-                {index + 1}
-              </Link>
-            );
-          })}
-        </nav>
+                {correct}/{total} acertadas
+              </Badge>
+            )}
+            {finished && unanswered > 0 && (
+              <Badge variant="outline" className="font-mono tabular-nums">
+                {unanswered} en blanco
+              </Badge>
+            )}
+            {answer.isPending && <Spinner className="ml-auto size-3.5" />}
+          </div>
+
+          {/* Question grid: one square per question, linked to its section. */}
+          <nav
+            ref={gridRef}
+            className="scrollbar-subtle grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1"
+            aria-label="Preguntas"
+          >
+            {test.question_ids.map((questionId, index) => {
+              const s = submissionByQuestion.get(questionId);
+              const q = questions.data?.[index];
+              const result = s && reveal && q ? resultOf(s.choice, q.correct_option) : null;
+              const active = index === paramIndex;
+              return (
+                <Link
+                  key={questionId}
+                  to={`?questionIndex=${index}`}
+                  replace
+                  data-square={index}
+                  aria-label={`Ir a la pregunta ${index + 1}`}
+                  aria-current={active ? "step" : undefined}
+                  className={cn(
+                    "flex h-6 items-center justify-center rounded-md border font-mono text-[11px] tabular-nums transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)]",
+                    !s && "bg-background text-muted-foreground",
+                    s && !result && "border-primary/40 bg-accent text-accent-foreground",
+                    result === "correct" && "border-success/40 bg-success/15 text-success",
+                    result === "incorrect" &&
+                      "border-destructive/40 bg-destructive/10 text-destructive",
+                    result === "unanswered" && "bg-muted text-muted-foreground",
+                    active && "-translate-y-0.5 scale-110 border-foreground shadow-sm",
+                  )}
+                >
+                  {index + 1}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
       </header>
 
       {/* ---- snap-scrolling questions ---------------------------------------- */}
       <div
         ref={scrollerRef}
-        className="min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-contain"
+        className="scrollbar-subtle min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-contain"
       >
         {isLoading || !questions.data ? (
-          <div className="flex flex-col gap-3 p-4">
+          <div className="mx-auto flex w-full max-w-3xl flex-col gap-3 p-4">
             <Skeleton className="h-7 w-3/4" />
             <Skeleton className="h-14 w-full" />
             <Skeleton className="h-14 w-full" />
@@ -327,6 +350,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
               return (
                 <TestQuestionCard
                   key={question.id}
+                  testId={test.id}
                   question={question}
                   index={index}
                   total={total}
@@ -341,7 +365,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
             {!finished && (
               <section
                 data-question-index={total}
-                className="flex min-h-full snap-start flex-col items-center justify-center gap-6 px-4 py-8 text-center"
+                className="mx-auto flex min-h-full w-full max-w-3xl snap-start flex-col items-center justify-center gap-6 px-4 py-8 text-center"
               >
                 <CheckCircleIcon className="size-12 text-primary" />
                 <div className="flex flex-col gap-1">
@@ -388,7 +412,7 @@ function SummaryScreen({
   return (
     <section
       data-question-index={SUMMARY_INDEX}
-      className="flex min-h-full snap-start flex-col items-center justify-center gap-6 px-4 py-8 text-center"
+      className="mx-auto flex min-h-full w-full max-w-3xl snap-start flex-col items-center justify-center gap-6 px-4 py-8 text-center"
     >
       <TrophyIcon className="size-12 text-primary" />
       <div className="flex flex-col gap-1">

@@ -50,7 +50,8 @@ const columnHelper = createColumnHelper<DataTableFeatures, SubmissionView>();
 const columns = columnHelper.columns([
   columnHelper.accessor("timestamp", {
     id: "timestamp",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Fecha" />,
+    meta: { label: "Fecha" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => (
       <span className="whitespace-nowrap text-xs text-muted-foreground">
         {formatDateTime(getValue())}
@@ -60,6 +61,7 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("result", {
     id: "result",
+    meta: { label: "Resultado" },
     header: "Resultado",
     enableSorting: false,
     cell: ({ getValue }) => <ResultBadge result={getValue()} />,
@@ -67,6 +69,8 @@ const columns = columnHelper.columns([
   columnHelper.accessor("statement", {
     id: "statement",
     header: "Pregunta",
+    // Rows are unidentifiable without it.
+    enableHiding: false,
     enableSorting: false,
     cell: ({ row, getValue }) => (
       <Link
@@ -79,13 +83,15 @@ const columns = columnHelper.columns([
   }),
   columnHelper.accessor("exam_name", {
     id: "exam",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Examen" />,
+    meta: { label: "Examen" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => <span className="text-xs text-muted-foreground">{getValue()}</span>,
     sortFn: "text",
   }),
   columnHelper.accessor("unit_number", {
     id: "unit",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Unidad" />,
+    meta: { label: "Unidad" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ row }) => (
       <span className="block max-w-40 truncate text-xs" title={row.original.unit_name}>
         <span className="font-mono text-muted-foreground">{row.original.unit_number}.</span>{" "}
@@ -97,6 +103,8 @@ const columns = columnHelper.columns([
   columnHelper.display({
     id: "actions",
     header: "",
+    // Unlabelled, so it would show as a blank entry in the column menu.
+    enableHiding: false,
     cell: ({ row }) => (
       <DropdownMenu>
         <DropdownMenuTrigger
@@ -215,6 +223,7 @@ export function SubmissionsPage() {
         </div>
       ) : (
         <DataTable
+          tableId="submissions"
           columns={columns}
           data={filtered}
           getRowId={(row) => row.id}

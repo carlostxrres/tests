@@ -1,15 +1,5 @@
 import type { Test } from "@/lib/types";
 
-// Fisher-Yates shuffle over a copy.
-export function shuffle<T>(items: readonly T[]): T[] {
-  const result = [...items];
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
-  }
-  return result;
-}
-
 // Picks up to `count` questions without repetition. `weight` lets a future
 // "review mode" favour failed or never-seen questions; default is uniform.
 export function pickRandomQuestions<T extends { id: string }>(

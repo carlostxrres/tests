@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/components/AppLayout";
 import { ExploreLayout } from "@/components/ExploreLayout";
 import { RequireAuth } from "@/components/RequireAuth";
@@ -16,13 +16,6 @@ import { SyllabusPage } from "@/pages/SyllabusPage";
 import { TestPage } from "@/pages/TestPage";
 import { TestsPage } from "@/pages/TestsPage";
 
-// Pre-/explore URLs (bookmarks, the installed PWA, shared links) keep working:
-// /questions?unit=x → /explore/questions?unit=x, /submissions/42 → /explore/submissions/42.
-function LegacyExploreRedirect() {
-  const { pathname, search, hash } = useLocation();
-  return <Navigate to={{ pathname: `/explore${pathname}`, search, hash }} replace />;
-}
-
 function App() {
   return (
     <ThemeProvider>
@@ -31,11 +24,6 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/login" element={<LoginPage />} />
-              {/* Outside RequireAuth so the login round-trip returns to the new
-                  URL rather than the old one. A splat also matches the bare path. */}
-              <Route path="/syllabus/*" element={<LegacyExploreRedirect />} />
-              <Route path="/questions/*" element={<LegacyExploreRedirect />} />
-              <Route path="/submissions/*" element={<LegacyExploreRedirect />} />
               <Route element={<RequireAuth />}>
                 {/* The test runner has its own full-screen layout without tabs. */}
                 <Route path="/tests/:id" element={<TestPage />} />
@@ -50,12 +38,6 @@ function App() {
                       <Route path="questions" element={<QuestionsPage />} />
                       <Route path="submissions" element={<SubmissionsPage />} />
                     </Route>
-                    {/* The exam-detail page was folded into /explore/syllabus's
-                        accordion; keep old links from bouncing to the catch-all. */}
-                    <Route
-                      path="syllabus/:id"
-                      element={<Navigate to="/explore/syllabus" replace />}
-                    />
                     <Route path="questions/:id" element={<QuestionPage />} />
                     <Route path="submissions/:id" element={<SubmissionPage />} />
                   </Route>
