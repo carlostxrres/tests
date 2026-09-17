@@ -42,7 +42,10 @@ const Fraction = ({ value, total }: { value: number; total: number }) => (
 
 const nameColumn = columnHelper.accessor((t) => t.name ?? "", {
   id: "name",
-  header: ({ column }) => <DataTableColumnHeader column={column} title="Nombre" />,
+  meta: { label: "Nombre" },
+  // Rows are unidentifiable without it.
+  enableHiding: false,
+  header: ({ column }) => <DataTableColumnHeader column={column} />,
   cell: ({ row }) => (
     <Link
       to={`/tests/${row.original.id}`}
@@ -56,7 +59,8 @@ const nameColumn = columnHelper.accessor((t) => t.name ?? "", {
 
 const startColumn = columnHelper.accessor("start", {
   id: "start",
-  header: ({ column }) => <DataTableColumnHeader column={column} title="Inicio" />,
+  meta: { label: "Inicio" },
+  header: ({ column }) => <DataTableColumnHeader column={column} />,
   cell: ({ getValue }) => (
     <span className="whitespace-nowrap text-xs text-muted-foreground">
       {formatDateTime(getValue())}
@@ -67,6 +71,7 @@ const startColumn = columnHelper.accessor("start", {
 
 const typeColumn = columnHelper.accessor("instant_feedback", {
   id: "type",
+  meta: { label: "Tipo" },
   header: "Tipo",
   enableSorting: false,
   cell: ({ getValue }) => <FeedbackBadge instant={getValue()} />,
@@ -74,7 +79,8 @@ const typeColumn = columnHelper.accessor("instant_feedback", {
 
 const answeredColumn = columnHelper.accessor((t) => t.stats.answered_count, {
   id: "answered",
-  header: ({ column }) => <DataTableColumnHeader column={column} title="Respondidas" />,
+  meta: { label: "Respondidas" },
+  header: ({ column }) => <DataTableColumnHeader column={column} />,
   cell: ({ row }) => (
     <Fraction
       value={row.original.stats.answered_count}
@@ -86,7 +92,8 @@ const answeredColumn = columnHelper.accessor((t) => t.stats.answered_count, {
 
 const correctColumn = columnHelper.accessor((t) => t.stats.correct_count, {
   id: "correct",
-  header: ({ column }) => <DataTableColumnHeader column={column} title="Acertadas" />,
+  meta: { label: "Acertadas" },
+  header: ({ column }) => <DataTableColumnHeader column={column} />,
   cell: ({ row }) =>
     isFinished(row.original) || row.original.instant_feedback ? (
       <Fraction
@@ -101,7 +108,8 @@ const correctColumn = columnHelper.accessor((t) => t.stats.correct_count, {
 
 const unitsColumn = columnHelper.accessor((t) => t.unit_ids.length, {
   id: "units",
-  header: ({ column }) => <DataTableColumnHeader column={column} title="Unidades" />,
+  meta: { label: "Unidades" },
+  header: ({ column }) => <DataTableColumnHeader column={column} />,
   cell: ({ getValue }) => <span className="font-mono text-xs tabular-nums">{getValue()}</span>,
   sortFn: "basic",
 });
@@ -116,6 +124,8 @@ const inProgressColumns = columnHelper.columns([
   columnHelper.display({
     id: "actions",
     header: "",
+    // Unlabelled, so it would show as a blank entry in the column menu.
+    enableHiding: false,
     cell: ({ row }) => (
       <div className="flex items-center justify-end gap-1">
         <LinkButton size="sm" to={`/tests/${row.original.id}`}>
@@ -133,7 +143,8 @@ const finishedColumns = columnHelper.columns([
   startColumn,
   columnHelper.accessor("end", {
     id: "end",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Fin" />,
+    meta: { label: "Fin" },
+    header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ getValue }) => {
       const value = getValue();
       return (
@@ -151,6 +162,8 @@ const finishedColumns = columnHelper.columns([
   columnHelper.display({
     id: "actions",
     header: "",
+    // Unlabelled, so it would show as a blank entry in the column menu.
+    enableHiding: false,
     cell: ({ row }) => (
       <div className="flex items-center justify-end gap-1">
         <LinkButton variant="outline" size="sm" to={`/tests/${row.original.id}?questionIndex=-1`}>
@@ -191,6 +204,7 @@ export function TestsPage() {
             <section className="flex flex-col gap-3">
               <h2 className="font-heading text-lg font-semibold">Tests a medias</h2>
               <DataTable
+                tableId="tests-in-progress"
                 columns={inProgressColumns}
                 data={inProgress}
                 getRowId={(t) => t.id}
@@ -216,6 +230,7 @@ export function TestsPage() {
             <section className="flex flex-col gap-3">
               <h2 className="font-heading text-lg font-semibold">Tests terminados</h2>
               <DataTable
+                tableId="tests-finished"
                 columns={finishedColumns}
                 data={finished}
                 getRowId={(t) => t.id}

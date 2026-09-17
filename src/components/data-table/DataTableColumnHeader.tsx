@@ -6,7 +6,9 @@ import type { DataTableFeatures } from "./features";
 
 type Props<TData extends RowData, TValue extends CellData> = {
   column: Column<DataTableFeatures, TData, TValue>;
-  title: string;
+  // Defaults to the column's `meta.label`, which the column menu reads too, so
+  // the label only has to be written once.
+  title?: string;
   className?: string;
 };
 
@@ -15,8 +17,9 @@ export function DataTableColumnHeader<TData extends RowData, TValue extends Cell
   title,
   className,
 }: Props<TData, TValue>) {
+  const label = title ?? column.columnDef.meta?.label ?? column.id;
   if (!column.getCanSort()) {
-    return <span className={cn("text-xs font-medium", className)}>{title}</span>;
+    return <span className={cn("text-xs font-medium", className)}>{label}</span>;
   }
   const sorted = column.getIsSorted();
   return (
@@ -27,7 +30,7 @@ export function DataTableColumnHeader<TData extends RowData, TValue extends Cell
       data-sorted={sorted !== false}
       onClick={() => column.toggleSorting(sorted === "asc")}
     >
-      {title}
+      {label}
       {sorted === "asc" ? (
         <ArrowUpIcon data-icon="inline-end" />
       ) : sorted === "desc" ? (
