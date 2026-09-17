@@ -332,6 +332,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
               return (
                 <TestQuestionCard
                   key={question.id}
+                  testId={test.id}
                   question={question}
                   index={index}
                   total={total}
