@@ -50,7 +50,7 @@ export function TestQuestionCard({
     <section
       id={`question-${index}`}
       data-question-index={index}
-      className="flex min-h-full snap-start flex-col gap-4 px-4 pt-4 pb-8"
+      className="mx-auto flex min-h-full w-full max-w-3xl snap-start flex-col gap-4 px-4 pt-4 pb-8"
       aria-label={`Pregunta ${index + 1} de ${total}`}
     >
       <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
