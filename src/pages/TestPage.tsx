@@ -105,6 +105,9 @@ function TestRunner({ test }: { test: TestWithStats }) {
   );
 
   // Whichever section covers most of the viewport becomes the current index.
+  // The thresholds are spread out rather than a single 0.5: a section taller
+  // than twice the scroller can never reach a ratio of 0.5, so it would never
+  // fire and the index would silently stop updating on it.
   // `finished` is a dependency on purpose: the summary section appears when the
   // test ends and must be observed too.
   // biome-ignore lint/correctness/useExhaustiveDependencies: see above
@@ -112,19 +115,34 @@ function TestRunner({ test }: { test: TestWithStats }) {
     const root = scrollerRef.current;
     if (!root || !questions.data) return;
     const sections = Array.from(root.querySelectorAll<HTMLElement>("[data-question-index]"));
+    // A callback only carries the sections that just crossed a threshold, so
+    // the last known coverage of every section is kept to compare against.
+    const areaByIndex = new Map<number, number>();
     const observer = new IntersectionObserver(
       (entries) => {
-        const best = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!best) return;
-        const index = Number((best.target as HTMLElement).dataset.questionIndex);
-        if (observedIndexRef.current !== index) {
-          observedIndexRef.current = index;
-          setIndexParam(index);
+        for (const entry of entries) {
+          const { width, height } = entry.intersectionRect;
+          // Covered area, not intersectionRatio: the ratio is relative to the
+          // section's own height, so a long question filling the screen would
+          // lose to a short neighbour that is barely in view.
+          areaByIndex.set(
+            Number((entry.target as HTMLElement).dataset.questionIndex),
+            width * height,
+          );
         }
+        let best: number | null = null;
+        let bestArea = 0;
+        for (const [index, area] of areaByIndex) {
+          if (area > bestArea) {
+            best = index;
+            bestArea = area;
+          }
+        }
+        if (best === null || observedIndexRef.current === best) return;
+        observedIndexRef.current = best;
+        setIndexParam(best);
       },
-      { root, threshold: [0.5] },
+      { root, threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
     );
     for (const s of sections) observer.observe(s);
     return () => observer.disconnect();
