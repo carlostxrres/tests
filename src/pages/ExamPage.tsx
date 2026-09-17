@@ -33,7 +33,7 @@ export function ExamPage() {
   const statsByUnit = useMemo(() => aggregateBy(stats.data, (s) => s.unit_id), [stats.data]);
 
   const back = (
-    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/syllabus">
+    <LinkButton variant="ghost" size="sm" className="-ml-2 w-fit" to="/explore/syllabus">
       <ArrowLeftIcon data-icon="inline-start" />
       Temario
     </LinkButton>
@@ -88,7 +88,7 @@ export function ExamPage() {
                 <ItemTitle className="text-pretty">{unit.name}</ItemTitle>
                 <ItemDescription className="flex flex-wrap gap-x-3 gap-y-1">
                   <Link
-                    to={`/questions?unit=${unit.id}`}
+                    to={`/explore/questions?unit=${unit.id}`}
                     className="inline-flex items-center gap-1 underline-offset-4 hover:underline"
                   >
                     <CircleHelpIcon className="size-3.5" />

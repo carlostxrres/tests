@@ -1,18 +1,10 @@
-import {
-  BookOpenIcon,
-  CircleHelpIcon,
-  ClipboardListIcon,
-  HistoryIcon,
-  SettingsIcon,
-} from "lucide-react";
+import { ClipboardListIcon, FolderSearchIcon, SettingsIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const tabs = [
-  { to: "/syllabus", label: "Temario", icon: BookOpenIcon },
-  { to: "/questions", label: "Preguntas", icon: CircleHelpIcon },
+  { to: "/explore", label: "Explorar", icon: FolderSearchIcon },
   { to: "/tests", label: "Tests", icon: ClipboardListIcon },
-  { to: "/submissions", label: "Respuestas", icon: HistoryIcon },
   { to: "/settings", label: "Ajustes", icon: SettingsIcon },
 ];
 
@@ -25,7 +17,7 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <ul className="mx-auto grid h-16 max-w-3xl grid-cols-5">
+      <ul className="mx-auto grid h-16 max-w-3xl grid-cols-3">
         {tabs.map(({ to, label, icon: Icon }) => (
           <li key={to} className="min-w-0">
             <NavLink
