@@ -94,11 +94,14 @@ export function ExamPage() {
                     <CircleHelpIcon className="size-3.5" />
                     {count} preguntas
                   </Link>
-                  <span className="inline-flex items-center gap-1">
+                  <Link
+                    to={`/explore/submissions?unit=${unit.id}`}
+                    className="inline-flex items-center gap-1 underline-offset-4 hover:underline"
+                  >
                     <HistoryIcon className="size-3.5" />
                     {agg.submissions} respuestas
                     {agg.unanswered > 0 && ` (${agg.unanswered} en blanco)`}
-                  </span>
+                  </Link>
                 </ItemDescription>
               </ItemContent>
               <CorrectRatioChart
