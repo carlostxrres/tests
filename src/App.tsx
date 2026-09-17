@@ -5,7 +5,6 @@ import { RequireAuth } from "@/components/RequireAuth";
 import { Toaster } from "@/components/ui/toast";
 import { AuthProvider } from "@/hooks/useAuth";
 import { ThemeProvider } from "@/hooks/useTheme";
-import { ExamPage } from "@/pages/ExamPage";
 import { LoginPage } from "@/pages/LoginPage";
 import { NewTestPage } from "@/pages/NewTestPage";
 import { QuestionPage } from "@/pages/QuestionPage";
@@ -51,7 +50,12 @@ function App() {
                       <Route path="questions" element={<QuestionsPage />} />
                       <Route path="submissions" element={<SubmissionsPage />} />
                     </Route>
-                    <Route path="syllabus/:id" element={<ExamPage />} />
+                    {/* The exam-detail page was folded into /explore/syllabus's
+                        accordion; keep old links from bouncing to the catch-all. */}
+                    <Route
+                      path="syllabus/:id"
+                      element={<Navigate to="/explore/syllabus" replace />}
+                    />
                     <Route path="questions/:id" element={<QuestionPage />} />
                     <Route path="submissions/:id" element={<SubmissionPage />} />
                   </Route>

@@ -1,15 +1,14 @@
-import { BookOpenIcon, ChevronRightIcon } from "lucide-react";
+import { BookOpenIcon, CircleHelpIcon, HistoryIcon } from "lucide-react";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { LinkButton } from "@/components/LinkButton";
+import { CorrectRatioChart } from "@/components/CorrectRatioChart";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardAction, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Empty,
   EmptyDescription,
@@ -17,20 +16,31 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { Item, ItemContent, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/ui/item";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useExams } from "@/lib/queries/exams";
-import { useQuestionIndex } from "@/lib/queries/questions";
+import { useQuestionIndex, useQuestionStats } from "@/lib/queries/questions";
+import { aggregateBy, emptyAggregate } from "@/lib/stats";
 
 export function SyllabusPage() {
   const exams = useExams();
   const questions = useQuestionIndex();
+  const stats = useQuestionStats();
 
   const questionsByUnit = useMemo(() => {
     const counts = new Map<string, number>();
     for (const q of questions.data ?? []) counts.set(q.unit_id, (counts.get(q.unit_id) ?? 0) + 1);
     return counts;
   }, [questions.data]);
+
+  const statsByUnit = useMemo(() => aggregateBy(stats.data, (s) => s.unit_id), [stats.data]);
 
   return (
     <div className="flex flex-col gap-4 px-4">
@@ -60,33 +70,49 @@ export function SyllabusPage() {
               <CardDescription>
                 {exam.units.length} unidades · {total} preguntas
               </CardDescription>
-              <CardAction>
-                <LinkButton variant="outline" size="sm" to={`/explore/syllabus/${exam.id}`}>
-                  Detalle
-                  <ChevronRightIcon data-icon="inline-end" />
-                </LinkButton>
-              </CardAction>
             </CardHeader>
             <Accordion className="px-6 pb-2" defaultValue={["units"]}>
               <AccordionItem value="units">
                 <AccordionTrigger>Unidades</AccordionTrigger>
                 <AccordionContent>
-                  <ItemGroup className="gap-1">
-                    {exam.units.map((unit) => (
-                      <Item
-                        key={unit.id}
-                        size="xs"
-                        render={<Link to={`/explore/questions?unit=${unit.id}`} />}
-                      >
-                        <ItemMedia className="w-6 justify-end font-mono text-xs text-muted-foreground">
-                          {unit.number}
-                        </ItemMedia>
-                        <ItemContent>
-                          <ItemTitle className="font-normal">{unit.name}</ItemTitle>
-                        </ItemContent>
-                        <Badge variant="secondary">{questionsByUnit.get(unit.id) ?? 0}</Badge>
-                      </Item>
-                    ))}
+                  <ItemGroup className="gap-2">
+                    {exam.units.map((unit) => {
+                      const agg = statsByUnit.get(unit.id) ?? emptyAggregate;
+                      const count = questionsByUnit.get(unit.id) ?? 0;
+                      return (
+                        <Item key={unit.id} variant="outline" className="items-start">
+                          <ItemMedia className="w-6 justify-end self-start pt-0.5 font-mono text-sm text-muted-foreground">
+                            {unit.number}
+                          </ItemMedia>
+                          <ItemContent className="gap-2">
+                            <ItemTitle className="text-pretty">{unit.name}</ItemTitle>
+                            <ItemDescription className="flex flex-wrap gap-x-3 gap-y-1">
+                              <Link
+                                to={`/explore/questions?unit=${unit.id}`}
+                                className="inline-flex items-center gap-1 underline-offset-4 hover:underline"
+                              >
+                                <CircleHelpIcon className="size-3.5" />
+                                {count} preguntas
+                              </Link>
+                              <Link
+                                to={`/explore/submissions?unit=${unit.id}`}
+                                className="inline-flex items-center gap-1 underline-offset-4 hover:underline"
+                              >
+                                <HistoryIcon className="size-3.5" />
+                                {agg.submissions} respuestas
+                                {agg.unanswered > 0 && ` (${agg.unanswered} en blanco)`}
+                              </Link>
+                            </ItemDescription>
+                          </ItemContent>
+                          <CorrectRatioChart
+                            correct={agg.correct}
+                            incorrect={agg.incorrect}
+                            unanswered={agg.unanswered}
+                            className="self-center"
+                          />
+                        </Item>
+                      );
+                    })}
                   </ItemGroup>
                 </AccordionContent>
               </AccordionItem>

@@ -120,7 +120,6 @@ export function TestQuestionCard({
           </div>
           <Separator />
           <ExamUnitBreadcrumb
-            examId={question.unit.exam.id}
             examName={question.unit.exam.name}
             unitId={question.unit.id}
             unitNumber={question.unit.number}

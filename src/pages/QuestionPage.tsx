@@ -70,7 +70,6 @@ export function QuestionPage() {
           <div className="flex flex-col gap-2">
             {back}
             <ExamUnitBreadcrumb
-              examId={q.unit.exam.id}
               examName={q.unit.exam.name}
               unitId={q.unit.id}
               unitNumber={q.unit.number}
