@@ -24,7 +24,7 @@ export function BottomNav() {
               to={to}
               className={({ isActive }) =>
                 cn(
-                  "flex h-full flex-col items-center justify-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors select-none active:bg-muted",
+                  "flex h-full flex-col items-center justify-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors select-none",
                   isActive && "text-primary",
                 )
               }
