@@ -1,4 +1,12 @@
-import { createContext, type ReactNode, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  type ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 export type Theme = "system" | "light" | "dark";
 
@@ -34,16 +42,18 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => media.removeEventListener("change", apply);
   }, [theme]);
 
-  function setTheme(next: Theme) {
+  const setTheme = useCallback((next: Theme) => {
     setThemeState(next);
     try {
       localStorage.setItem(STORAGE_KEY, next);
     } catch {
       // Storage may be unavailable (private mode); the in-memory value still applies.
     }
-  }
+  }, []);
 
-  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
+  const value = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
