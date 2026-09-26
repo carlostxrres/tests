@@ -1,12 +1,13 @@
-import { Cell, Pie, PieChart } from "recharts";
-import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
+import { lazy, Suspense } from "react";
+import type { RingSlice } from "@/components/CorrectRatioRing";
 import { cn } from "@/lib/utils";
 
-const config = {
-  correct: { label: "Correctas", color: "var(--chart-1)" },
-  incorrect: { label: "Incorrectas", color: "var(--chart-2)" },
-  unanswered: { label: "Sin responder", color: "var(--chart-3)" },
-} satisfies ChartConfig;
+const CorrectRatioRing = lazy(() =>
+  import("@/components/CorrectRatioRing").then((m) => ({ default: m.CorrectRatioRing })),
+);
+
+// The ring sits between 68% and 100% of the radius, so it is 16% of the box wide.
+const RING_WIDTH_RATIO = 0.16;
 
 type Props = {
   correct: number;
@@ -18,7 +19,8 @@ type Props = {
 };
 
 // Small donut with the correct ratio in the middle. Renders an empty ring when
-// there is nothing to show.
+// there is nothing to show. The percentage is painted right away; only the ring
+// waits for the chart chunk.
 export function CorrectRatioChart({
   correct,
   incorrect,
@@ -28,7 +30,7 @@ export function CorrectRatioChart({
 }: Props) {
   const answered = correct + incorrect;
   const ratio = answered > 0 ? Math.round((correct / answered) * 100) : null;
-  const data =
+  const data: RingSlice[] =
     answered + unanswered > 0
       ? [
           { key: "correct", value: correct },
@@ -39,26 +41,16 @@ export function CorrectRatioChart({
 
   return (
     <div className={cn("relative shrink-0", className)} style={{ width: size, height: size }}>
-      <ChartContainer config={config} className="aspect-square h-full w-full">
-        <PieChart>
-          <Pie
-            data={data}
-            dataKey="value"
-            nameKey="key"
-            innerRadius="68%"
-            outerRadius="100%"
-            strokeWidth={0}
-            isAnimationActive={false}
-          >
-            {data.map((d) => (
-              <Cell
-                key={d.key}
-                fill={d.key === "empty" ? "var(--muted)" : `var(--color-${d.key})`}
-              />
-            ))}
-          </Pie>
-        </PieChart>
-      </ChartContainer>
+      <Suspense
+        fallback={
+          <div
+            className="size-full rounded-full border-muted"
+            style={{ borderWidth: Math.round(size * RING_WIDTH_RATIO) }}
+          />
+        }
+      >
+        <CorrectRatioRing data={data} />
+      </Suspense>
       <output
         className="absolute inset-0 flex items-center justify-center tracking-tighter text-xs font-medium tabular-nums"
         aria-label={ratio === null ? "Sin datos" : `${ratio}% correctas`}
