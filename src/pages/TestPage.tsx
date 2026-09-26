@@ -28,6 +28,7 @@ import { isFinished, revealsResults } from "@/lib/tests";
 import { notify, notifyError } from "@/lib/toast";
 import { resultOf, type SubmissionView } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 const SUMMARY_INDEX = -1;
 
@@ -285,7 +286,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
           {/* Question grid: one square per question, linked to its section. */}
           <nav
             ref={gridRef}
-            className="scrollbar-subtle grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1"
+            className="scrollbar-subtle grid max-h-24 grid-cols-[repeat(auto-fill,minmax(1.75rem,1fr))] gap-1 overflow-y-auto py-1 px-1"
             aria-label="Preguntas"
           >
             {test.question_ids.map((questionId, index) => {
@@ -302,14 +303,16 @@ function TestRunner({ test }: { test: TestWithStats }) {
                   aria-label={`Ir a la pregunta ${index + 1}`}
                   aria-current={active ? "step" : undefined}
                   className={cn(
-                    "flex h-6 items-center justify-center rounded-md border font-mono text-[11px] tabular-nums transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)]",
-                    !s && "bg-background text-muted-foreground",
+                    buttonVariants({
+                      variant: active ? "secondary" : "outline",
+                      size: "xs",
+                    }),
                     s && !result && "border-primary/40 bg-accent text-accent-foreground",
                     result === "correct" && "border-success/40 bg-success/15 text-success",
                     result === "incorrect" &&
                       "border-destructive/40 bg-destructive/10 text-destructive",
                     result === "unanswered" && "bg-muted text-muted-foreground",
-                    active && "-translate-y-0.5 scale-110 border-foreground shadow-sm",
+                    active && "border-foreground",
                   )}
                 >
                   {index + 1}
