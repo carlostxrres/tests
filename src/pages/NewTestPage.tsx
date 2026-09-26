@@ -62,8 +62,9 @@ const DEFAULT_COUNT = 20;
 // Reads the prefill that "Duplicar" puts in the URL.
 function readPrefill(params: URLSearchParams, exams: ExamWithUnits[] | undefined) {
   const unitIds = params.getAll("unit");
+  const unitIdSet = new Set(unitIds);
   const examIds = exams
-    ? exams.filter((e) => e.units.some((u) => unitIds.includes(u.id))).map((e) => e.id)
+    ? exams.filter((e) => e.units.some((u) => unitIdSet.has(u.id))).map((e) => e.id)
     : [];
   const count = Number(params.get("count"));
   return {
@@ -120,7 +121,8 @@ function NewTestWizard({
   const form = useForm({
     defaultValues: prefill,
     onSubmit: async ({ value }) => {
-      const candidates = (questions.data ?? []).filter((q) => value.unitIds.includes(q.unit_id));
+      const selectedUnitIds = new Set(value.unitIds);
+      const candidates = (questions.data ?? []).filter((q) => selectedUnitIds.has(q.unit_id));
       const questionIds = pickRandomQuestions(candidates, value.count);
       try {
         const test = await createTest.mutateAsync({
@@ -141,10 +143,10 @@ function NewTestWizard({
   const count = useStore(form.store, (s) => s.values.count);
   const isSubmitting = useStore(form.store, (s) => s.isSubmitting);
 
-  const selectedExams = useMemo(
-    () => exams.filter((e) => examIds.includes(e.id)),
-    [exams, examIds],
-  );
+  const selectedExams = useMemo(() => {
+    const selected = new Set(examIds);
+    return exams.filter((e) => selected.has(e.id));
+  }, [exams, examIds]);
   const available = useMemo(
     () => unitIds.reduce((sum, id) => sum + (questionsByUnit.get(id) ?? 0), 0),
     [unitIds, questionsByUnit],
@@ -273,7 +275,9 @@ function NewTestWizard({
                 <FieldGroup>
                   {selectedExams.map((exam) => {
                     const ids = exam.units.map((u) => u.id);
-                    const allSelected = ids.every((id) => field.state.value.includes(id));
+                    const idSet = new Set(ids);
+                    const selectedIds = new Set(field.state.value);
+                    const allSelected = ids.every((id) => selectedIds.has(id));
                     return (
                       <FieldSet key={exam.id}>
                         <div className="flex items-center justify-between gap-2">
@@ -285,7 +289,7 @@ function NewTestWizard({
                             onClick={() =>
                               field.handleChange(
                                 allSelected
-                                  ? field.state.value.filter((id) => !ids.includes(id))
+                                  ? field.state.value.filter((id) => !idSet.has(id))
                                   : [...new Set([...field.state.value, ...ids])],
                               )
                             }
