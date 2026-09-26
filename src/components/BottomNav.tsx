@@ -1,11 +1,14 @@
-import { ClipboardListIcon, FolderSearchIcon, SettingsIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { DynamicIcon } from "@/components/DynamicIcon";
+import { folderSearchIcon } from "@/lib/dynamic-icons/folder-search";
+import { clipboardListIcon } from "@/lib/dynamic-icons/clipboard-list";
+import { settingsIcon } from "@/lib/dynamic-icons/settings";
 
 const tabs = [
-  { to: "/explore", label: "Explorar", icon: FolderSearchIcon },
-  { to: "/tests", label: "Tests", icon: ClipboardListIcon },
-  { to: "/settings", label: "Ajustes", icon: SettingsIcon },
+  { to: "/explore", label: "Explorar", icon: folderSearchIcon },
+  { to: "/tests", label: "Tests", icon: clipboardListIcon },
+  { to: "/settings", label: "Ajustes", icon: settingsIcon },
 ];
 
 // Thumb-friendly tab bar: every tab is a full-height link (≥ 64px) and the
@@ -18,7 +21,7 @@ export function BottomNav() {
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       <ul className="mx-auto grid h-16 max-w-3xl grid-cols-3">
-        {tabs.map(({ to, label, icon: Icon }) => (
+        {tabs.map(({ to, label, icon }) => (
           <li key={to} className="min-w-0">
             <NavLink
               to={to}
@@ -37,7 +40,7 @@ export function BottomNav() {
                       isActive && "bg-accent",
                     )}
                   >
-                    <Icon className="size-5" aria-hidden="true" />
+                    <DynamicIcon icon={icon} active={isActive} className="size-5" aria-hidden="true" />
                   </span>
                   <span className="truncate">{label}</span>
                 </>
