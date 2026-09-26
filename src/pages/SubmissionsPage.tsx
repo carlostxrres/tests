@@ -7,6 +7,7 @@ import { DataTable } from "@/components/data-table/DataTable";
 import { DataTableColumnHeader } from "@/components/data-table/DataTableColumnHeader";
 import type { DataTableFeatures } from "@/components/data-table/features";
 import { ResultBadge } from "@/components/ResultBadge";
+import { SearchInput } from "@/components/SearchInput";
 import { StatusSelect } from "@/components/StatusSelect";
 import { UnitCombobox } from "@/components/UnitCombobox";
 import { Button } from "@/components/ui/button";
@@ -24,12 +25,6 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupInput,
-} from "@/components/ui/input-group";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDateTime } from "@/lib/datetime";
 import { useExams } from "@/lib/queries/exams";
@@ -157,28 +152,7 @@ export function SubmissionsPage() {
   return (
     <div className="flex flex-col gap-3 px-4">
       <div className="flex flex-col gap-2 sm:flex-row">
-        <InputGroup className="sm:flex-1">
-          <InputGroupAddon>
-            <SearchIcon />
-          </InputGroupAddon>
-          <InputGroupInput
-            type="search"
-            placeholder="Buscar por examen, unidad o enunciado"
-            value={q}
-            onChange={(e) => patch({ q: e.target.value })}
-          />
-          {q && (
-            <InputGroupAddon align="inline-end">
-              <InputGroupButton
-                aria-label="Limpiar"
-                size="icon-xs"
-                onClick={() => patch({ q: null })}
-              >
-                <XIcon />
-              </InputGroupButton>
-            </InputGroupAddon>
-          )}
-        </InputGroup>
+        <SearchInput className="sm:flex-1" value={q} onValueChange={(next) => patch({ q: next })} />
         <div className="flex gap-2">
           <UnitCombobox
             exams={exams.data}
