@@ -530,7 +530,7 @@
       "Presidència"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4e0c9764-b084-4a47-8215-2ad0e82866d2",
@@ -543,7 +543,7 @@
       "Ajuntament de Sitges"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b61c1c49-52ff-4300-9bf7-44e9c2b47c34",
@@ -556,7 +556,7 @@
       "Secretaria"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a625f9ca-74b0-4776-a948-44b53f516cb5",
@@ -569,7 +569,7 @@
       "Traslladar la decisió a la Comissió Executiva."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ec03a3e2-ea41-4191-be6c-15f916d7f55a",
@@ -582,7 +582,7 @@
       "No, perquè sempre cal majoria absoluta."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "7d11211a-5161-44ae-880a-628a5cebd2aa",
@@ -595,7 +595,7 @@
       "La Vicepresidència modifica el quòrum aplicable."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "aba30a3b-4dd7-4976-adb5-fb66f1165acd",
@@ -608,7 +608,7 @@
       "Secretaria"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e990468a-b144-441c-8090-cd34194bed9f",
@@ -621,7 +621,7 @@
       "La persona de més edat del Consell General"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8fec00c6-ed2e-4c48-aa65-52c739c633cc",
@@ -634,7 +634,7 @@
       "Vicepresidència"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "75c51cb5-f036-4236-8d12-3de05fa65fb4",
@@ -647,7 +647,7 @@
       "Direcció-Gerència"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "50090c5a-50b4-4540-b0d0-82dfbfc8f377",
@@ -1180,7 +1180,7 @@
       "Fundació Stämpfli"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c2b2374f-a423-4a07-a672-be4d74171c1e",
@@ -1193,7 +1193,7 @@
       "Palau de Maricel"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8bfa3476-efa7-42f1-a33c-ece2af317c1f",
@@ -1206,7 +1206,7 @@
       "Fundació Stämpfli"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "75c1c312-7c12-4f59-b635-804ea1d76ca0",
@@ -1219,7 +1219,7 @@
       "El museu només obre temporalment; el Palau conserva la col·lecció permanent."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8d5a6fd7-7528-46d9-ae39-11ff7c821728",
@@ -1232,7 +1232,7 @@
       "Museu de Maricel"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5b531707-a324-4c71-9984-29d77b231418",
@@ -1245,7 +1245,7 @@
       "No hi va haver cap direcció artística unitària."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e2dd8ad7-8694-44cb-8acd-f950736690e1",
@@ -1258,7 +1258,7 @@
       "Palau de Maricel"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "054a4a52-5480-4951-94b0-f1a6b8fa7fe8",
@@ -1271,7 +1271,7 @@
       "Casa-taller del Cau Ferrat"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "cb891eea-f348-4908-913c-843cd3009433",
@@ -1284,7 +1284,7 @@
       "Museu de Maricel i arxiu municipal"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6e471b43-fa53-4f62-be31-0cefe87e361d",
@@ -1297,7 +1297,7 @@
       "No; tampoc forma part de l’oferta dels Museus de Sitges."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "108851c8-aa96-450f-92ac-1dcd99b0974f",
@@ -1830,7 +1830,7 @@
       "El model participatiu dona massa poder al grup."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "859fd2ae-caf8-4a03-8eea-067677e36b8c",
@@ -1843,7 +1843,7 @@
       "Avaluació excessivament qualitativa"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "46e5ae45-dd9b-4384-8f64-634303a43fca",
@@ -1856,7 +1856,7 @@
       "Substituir-lo per un text més tècnic."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1c0a0448-fbe6-4682-b2f1-11ccf3861323",
@@ -1869,7 +1869,7 @@
       "Donar per vàlida qualsevol afirmació sense contrast."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "59731a32-250f-4973-a87f-bd7255b1ba6b",
@@ -1882,7 +1882,7 @@
       "Observació no participant"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "63850ab0-fcf6-44be-91d2-c898dd02ecd4",
@@ -1895,7 +1895,7 @@
       "Producció final"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "775091c8-2f26-4795-8df1-b0e7d02199ae",
@@ -1908,7 +1908,7 @@
       "Escoles Tàndem"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e81207d2-461e-49a3-b3e4-3ee53a54ac1c",
@@ -1921,7 +1921,7 @@
       "Apadrinem el nostre patrimoni"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "151604ec-56f2-455c-8fbb-9336ed494c33",
@@ -1934,7 +1934,7 @@
       "Una durada més llarga"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "88f98d3f-060b-40a3-be49-2dfd4b015c60",
@@ -1947,7 +1947,7 @@
       "Qualitat gràfica"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4b3c8682-4f2e-42cd-9566-8824cc6f2474",
@@ -2480,7 +2480,7 @@
       "Fidelització elevada i interès nul"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "eead2d26-5cbf-4755-af17-e6d6d65bef1f",
@@ -2493,7 +2493,7 @@
       "Desestacionalització"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f55eb382-0961-4f34-9b55-9b7444e322de",
@@ -2506,7 +2506,7 @@
       "Respondre amb les seves dades de reserva."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d0508dd7-abe0-46d4-9e3c-e3b1b4c529ad",
@@ -2519,7 +2519,7 @@
       "Ús inadequat de mitjans guanyats"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "20c7c95f-b2df-446e-8fac-077dd61670d5",
@@ -2532,7 +2532,7 @@
       "Que la fotografia s’hagi fet dins de l’edifici."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f9c223fd-0b90-4ff7-819c-10db32a8b99c",
@@ -2545,7 +2545,7 @@
       "Identitat verbal"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2525d7e9-9eae-4123-821e-6d7a8fda6300",
@@ -2558,7 +2558,7 @@
       "Un públic turístic prioritari"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ba8de068-8d49-49ab-85d5-c59f71bee367",
@@ -2571,7 +2571,7 @@
       "Els candidats i les candidates i els candidats"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fca29adb-221f-4b97-873f-846390ddbcf2",
@@ -2584,7 +2584,7 @@
       "Durada de les visites guiades"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ec5ff46d-dcd4-4b17-a442-af75581aacaa",
@@ -2597,7 +2597,7 @@
       "Utilitzar-la només a les xarxes socials."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8af7bffc-c7d7-410b-87dc-7239bf63d3c6",
@@ -3130,7 +3130,7 @@
       "Drets de reproducció"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b68112cb-e32f-4182-81da-31e616b553d4",
@@ -3143,7 +3143,7 @@
       "Presentar les dues autories com a certes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "618cfd8c-ee6f-4cb9-864b-e80a9cb6170a",
@@ -3156,7 +3156,7 @@
       "Excés d’informació complementària"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "99893593-7bd6-464f-9ed3-1279f434d558",
@@ -3169,7 +3169,7 @@
       "Eliminació dels exemples"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a59c1e96-4472-45a8-b3cf-fb9f26495c34",
@@ -3182,7 +3182,7 @@
       "Considerar que el públic no té prou competència."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "01503192-1315-45da-a678-2a0bed362d41",
@@ -3195,7 +3195,7 @@
       "Publicar només la versió més atractiva."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "33f42abe-7608-41a3-9d88-d1fec2d4c7f3",
@@ -3208,7 +3208,7 @@
       "Només cal imprimir-ne més."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "38dc0f34-3214-417c-9a1e-658280768309",
@@ -3221,7 +3221,7 @@
       "Prototipatge inicial"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "47254c1b-01cf-4453-822f-38f1a651dfc9",
@@ -3234,7 +3234,7 @@
       "Més música de fons"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4ae7a92b-149e-45b0-b9b0-fbac07040991",
@@ -3247,7 +3247,7 @@
       "S’ha aplicat un disseny universal."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ef7fe9f0-7039-4671-acb5-e34bc4ae09ad",
@@ -3780,7 +3780,7 @@
       "Transformatiu"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "04e9098d-6bd7-41bd-948d-c3b4a45a1151",
@@ -3793,7 +3793,7 @@
       "Promocional"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8dcfa3a4-fc4b-46b0-a5da-c2dbb4b0a04c",
@@ -3806,7 +3806,7 @@
       "Transmissiu"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e25ce6b8-3c4f-4638-8898-db692399b5eb",
@@ -3819,7 +3819,7 @@
       "No, perquè cal una entrada separada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1b969486-54d6-4568-9fda-c32be4a05796",
@@ -3832,7 +3832,7 @@
       "Autoritat unidireccional"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1b21192f-f74b-48eb-a459-2bcd4cd63427",
@@ -3845,7 +3845,7 @@
       "Convertir la visita en una classe magistral."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c7d3531a-6922-406d-942c-52f40a740101",
@@ -3858,7 +3858,7 @@
       "Donar per acabat el programa sense observar el grup."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8b1b9ff7-2c71-4e41-81a1-e823f410dde3",
@@ -3871,7 +3871,7 @@
       "Adoptar un discurs transformatiu"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2026908c-ff98-4216-98d0-272e2a28e3fd",
@@ -3884,7 +3884,7 @@
       "Institucional"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3bc13985-0591-4032-9cc4-49d919f3d098",
@@ -3897,7 +3897,7 @@
       "Afavorir cohesió i diversitat."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f724bd85-f3ad-42c2-827b-48b447675dba",
@@ -4430,7 +4430,7 @@
       "La mitjana d’ocupació de l’any anterior"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f84a7fc0-24ee-4e4c-8bfd-a76b34d39481",
@@ -4443,7 +4443,7 @@
       "No, perquè les sales de pas mai generen interès."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "74f0bd9d-25a5-4133-bcd2-d807d4d8ec1f",
@@ -4456,7 +4456,7 @@
       "Utilitzar la sortida d’emergència com a entrada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d4aa2b05-caac-4043-87ea-a8b5eacd7843",
@@ -4469,7 +4469,7 @@
       "Que el problema només és comunicatiu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3d82a0f0-b086-4d66-b54b-44507500416a",
@@ -4482,7 +4482,7 @@
       "Mesurar només els ingressos."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5639b667-6257-48cf-bf0e-b77501b37c7d",
@@ -4495,7 +4495,7 @@
       "Interpretació patrimonial"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "344792a8-34bd-434a-84ad-764a7c430dcc",
@@ -4508,7 +4508,7 @@
       "No, i cal eliminar les reserves."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6564d0b4-5e1b-4575-890a-995cbb4e4a52",
@@ -4521,7 +4521,7 @@
       "Reducció de la capacitat legal"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "03ad53d9-50be-49ad-a511-c17930858ac0",
@@ -4534,7 +4534,7 @@
       "Traslladar la peça a una altra sala."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f19c453d-9d34-4747-ba98-87ed92fe3068",
@@ -4547,7 +4547,7 @@
       "Cancel·lar totes les activitats locals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "86489595-a01e-474b-a79a-9ffbd2039daf",
@@ -5080,7 +5080,7 @@
       "El museu ha utilitzat dades presencials."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f268b241-013c-4825-b33f-d59759370484",
@@ -5093,7 +5093,7 @@
       "Cap dels dos indicadors és aplicable"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1a7cd1bb-4320-41b9-9811-826d2fb95ad9",
@@ -5106,7 +5106,7 @@
       "Preu massa elevat de l’entrada"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ddaac12d-2205-41f7-83e4-c32dc3e6f300",
@@ -5119,7 +5119,7 @@
       "No, perquè els festivals no poden estudiar-se."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "571fb7f2-cc4d-453b-a6f1-3628b5b9156e",
@@ -5132,7 +5132,7 @@
       "La retenció elevada demostra comprensió."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3e80f9f7-f42c-4dee-ae37-dc41d52dd5ee",
@@ -5145,7 +5145,7 @@
       "Analitzar exclusivament el web."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "16fb2520-d4c5-40dc-a28c-27f06fe12c17",
@@ -5158,7 +5158,7 @@
       "No, perquè la satisfacció no es pot mesurar."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0a9260ee-f54b-4710-9fe5-34c77da61fde",
@@ -5171,7 +5171,7 @@
       "Convertir cada opinió en un fet objectiu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2036ad3d-ad97-4a22-a488-fff3618b33d1",
@@ -5184,7 +5184,7 @@
       "Substituir totes les dades per estimacions."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fdfdf4f1-cd62-42db-998d-8681c7ba134c",
@@ -5197,7 +5197,7 @@
       "Exclusivament amb dades econòmiques."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "eaa76e16-4df7-45d6-9204-5ac77ae6a0ff",
@@ -5730,7 +5730,7 @@
       "Interseccionalitat"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "afc3cc68-6199-4429-bf9c-1c90ecb8f45d",
@@ -5743,7 +5743,7 @@
       "Sí, però sense assignar-hi recursos."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0fd5ab0d-9971-427c-8820-134fab817fb9",
@@ -5756,7 +5756,7 @@
       "La gratuïtat sempre necessita publicitat turística."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e55e662b-8b3c-4640-b53f-1f1a03ea0d78",
@@ -5769,7 +5769,7 @@
       "Recuperació contemplativa"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5902cc7a-b0a8-46f8-a575-c021e1ca3dcf",
@@ -5782,7 +5782,7 @@
       "Segmentació sociodemogràfica"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "202a282d-5708-4e85-8b92-5b93dc2ee198",
@@ -5795,7 +5795,7 @@
       "Enviar el mateix missatge als públics habituals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9337356c-e22a-4dc8-8c91-f776f8eb65c8",
@@ -5808,7 +5808,7 @@
       "Eliminació del perfil per massa complex"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "7433de08-1126-42db-ae5a-f7bc6418a09f",
@@ -5821,7 +5821,7 @@
       "No, perquè diversificar significa fidelitzar."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "141e8f44-9f73-4f5b-9d24-376dfb7f077d",
@@ -5834,7 +5834,7 @@
       "Significatiu"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4006524a-2da8-4cc2-81c1-7c3557799514",
@@ -5847,7 +5847,7 @@
       "Falta de fidelització"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9653e1a2-2a99-4a44-8c46-02ae31470ec8",
@@ -5873,7 +5873,7 @@
       "La inclusió és una actuació temporal dirigida exclusivament als públics absents."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "56602faa-ee1d-487a-ac0c-adf8acd1e68c",
@@ -5886,7 +5886,7 @@
       "Aplicar descomptes generals sense analitzar altres dificultats d’accés."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1081caa8-1b4a-480b-9f7f-afd9ff3cc063",
@@ -5899,7 +5899,7 @@
       "Són expressions equivalents per designar l’augment del nombre de visitants."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fb4ffea3-bcb1-4230-ae2a-888dd2d31713",
@@ -5912,7 +5912,7 @@
       "Substitueix la programació pròpia per activitats proposades pels visitants."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "39c5c2d1-dd30-4fed-873d-5900919f206d",
@@ -5925,7 +5925,7 @@
       "Durant l’avaluació final, per aplicar-la en projectes posteriors."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "52f1fd66-45b2-4d56-92e3-b75ca16e6253",
@@ -5938,7 +5938,7 @@
       "Comunicació, senyalització, mediació i conservació de les obres."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "246efb4a-9eb3-4c7b-a3f1-07c503ed8fb9",
@@ -5951,7 +5951,7 @@
       "Instal·lar els recursos accessibles utilitzats habitualment per altres museus."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8b5fd206-e123-4aa7-ad43-67441095bf43",
@@ -5964,7 +5964,7 @@
       "Les opinions del personal d’atenció i les queixes rebudes."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fe82118a-0274-4c80-afbc-ac1ed4a56026",
@@ -5977,7 +5977,7 @@
       "Prioritzar les barreres que hagin generat més comentaris a les xarxes socials."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "601492bc-172e-48ee-8690-5dce51af4e83",
@@ -5990,7 +5990,7 @@
       "Substituir les visites presencials per continguts digitals."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5189a117-b2d4-43b1-b4cb-4f717fc4aa38",
@@ -6003,7 +6003,7 @@
       "Informar anticipadament dels nivells de soroll."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0e8de8f4-acd5-4ee7-b973-26534dd25c63",
@@ -6016,7 +6016,7 @@
       "Rampes, ascensors, seients i taulells accessibles."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b29f08df-aa1e-461a-b2ae-74622dda228b",
@@ -6029,7 +6029,7 @@
       "Contrast cromàtic, bona il·luminació i lletra ampliada."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "06715232-3b2c-45a8-a86e-62b330e2c67d",
@@ -6042,7 +6042,7 @@
       "Adreçar-se preferentment a l’acompanyant de la persona."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3839ceda-7145-4acb-bc3b-81216378abfd",
@@ -6055,7 +6055,7 @@
       "Substituir tots els textos per continguts audiovisuals."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "90dd7192-2c54-40a0-86e6-224164b56c73",
@@ -6068,7 +6068,7 @@
       "Concentrar les adaptacions en una única sala diferenciada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e92a3655-bad1-4c82-915b-83ca40d07174",
@@ -6081,7 +6081,7 @@
       "Incorporar obligatòriament un tutorial audiovisual."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "42adc300-ef6a-47c6-8cac-7e157ad200a4",
@@ -6094,7 +6094,7 @@
       "Escollir el mitjà de transport més adequat per arribar al museu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f737e5f4-f5d7-4837-8aae-b7427f2eabd3",
@@ -6107,7 +6107,7 @@
       "Augmentar-ne la quantitat fins que totes les decisions estiguin senyalitzades."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "95dbc0fe-dce0-4cf0-b718-ba7cf3dfd73b",
@@ -6120,7 +6120,7 @@
       "Durada aproximada visible, senyalització coherent i alternança de ritmes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9d1f5581-0bb3-4ec7-9352-a555c2cc6171",
@@ -6133,7 +6133,7 @@
       "Classificar els visitants segons les seves dades sociodemogràfiques."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "159c9849-c3d5-445b-95a9-c42716f17ad4",
@@ -6146,7 +6146,7 @@
       "Enquestes als visitants habituals i comparació amb museus propers."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "bc2f14c4-4652-43dc-91d0-39bb5d8780d3",
@@ -6159,7 +6159,7 @@
       "Perquè la manca d’assistència sempre és conseqüència del preu de l’entrada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "65f01a98-db6f-40dd-8d02-422626a130af",
@@ -6172,7 +6172,7 @@
       "Separar els públics assistents dels no-públics sense crear subdivisions."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1830a011-2410-46c8-a800-dac6e3fbec99",
@@ -6185,7 +6185,7 @@
       "Organitzar més activitats per donar a conèixer el museu."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "123516aa-342b-4ea7-83dd-6f42ce543d09",
@@ -6198,7 +6198,7 @@
       "Presentar-la públicament abans de contrastar-la amb els destinataris."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a4b3413b-f115-4d71-b650-50af88642890",
@@ -6211,7 +6211,7 @@
       "La programació s’adapta només quan les dades d’assistència són negatives."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fc381f70-03ae-466e-b624-e5e08e25a92b",
@@ -6224,7 +6224,7 @@
       "Perquè les polítiques d’accés han de basar-se exclusivament en tarifes socials."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c22f19b0-a973-489f-97b1-5b63cf3bd13a",
@@ -6237,7 +6237,7 @@
       "Crear una tarifa reduïda per als residents del municipi."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "967a60f3-a763-4dc2-ad05-1bff045fb405",
@@ -6250,7 +6250,7 @@
       "La interculturalitat substitueix els relats patrimonials per testimonis comunitaris."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "da37dd07-156e-4d0d-a20c-72d75aab7871",
@@ -6263,7 +6263,7 @@
       "Els projectes anuals dirigits específicament a comunitats culturalment diverses."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6b3a6889-740b-4487-a7e3-9e329a8464ac",
@@ -6276,7 +6276,7 @@
       "Evitar recollir informació sobre diferències internes per no crear discriminacions."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2987965d-68d7-4b1b-8f2f-37981b60f0e1",
@@ -6289,7 +6289,7 @@
       "Evitar qualsevol referència als conflictes històrics per no reproduir prejudicis."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "16ca8dda-893d-4677-8b88-6716e7d5091d",
@@ -6302,7 +6302,7 @@
       "Substituir-la per una denominació actual sense deixar constància del canvi."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fd91c5a3-608c-4701-98b6-cfa8b1a583b8",
@@ -6315,7 +6315,7 @@
       "Separar les interpretacions comunitàries del discurs principal del museu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "28f5c9c9-34ea-44ff-916b-a86582bde244",
@@ -6328,7 +6328,7 @@
       "Totes les exposicions han d’oferir exactament el mateix nombre de llengües."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8e86baa5-8f61-448b-9ab8-9df317199e34",
@@ -6354,7 +6354,7 @@
       "Substituir els professionals remunerats per participants voluntaris."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b3733ed7-068a-4ee3-a98a-2a02167c946d",
@@ -6367,7 +6367,7 @@
       "Accés: satisfacció del personal; participació: nombre d’exposicions; experiència: pressupost executat."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "da7ad20c-1f73-42bf-bec2-e1858d4ccc72",
@@ -6406,7 +6406,7 @@
       "Eliminar permanentment tots els estímuls sonors de l’exposició."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f7284e83-3a02-4378-ad81-b789ddbe42ef",
@@ -6419,7 +6419,7 @@
       "No és adequada perquè el museu ha d’oferir les mateixes activitats a tota la població."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a3dfd7e6-2dd2-431c-ad28-82b2c3b955c2",
@@ -6432,7 +6432,7 @@
       "No és una cocreació; és una relació instrumental en què l’entitat funciona com a canal de captació."
     ],
     "correctOption": 3,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6fabf2af-0569-46ed-84a7-f00891356c34",
@@ -6445,7 +6445,7 @@
       "Només s’ha de remunerar la comunitat si el projecte genera ingressos."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "52930619-f655-4e96-a323-d3e172216f64",
@@ -6458,7 +6458,7 @@
       "Substituir la gratuïtat per un descompte per augmentar el valor percebut."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c2ad2e82-50ae-400a-9e99-039116813a36",
@@ -6471,7 +6471,7 @@
       "El museu hauria d’haver separat l’activitat de l’exposició permanent."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ba3605e2-f3d7-468d-86e2-4a9f3a2a75a3",
@@ -6484,7 +6484,7 @@
       "Només cal afegir una enquesta de satisfacció al final de l’activitat."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "cec8aa13-5651-4b34-9b41-ab1e62a7ab48",
@@ -7030,7 +7030,7 @@
       "Excés de preguntes obertes"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "61210984-4815-4408-9308-4466abc572f6",
@@ -7043,7 +7043,7 @@
       "El mostreig passa a ser intencional."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "566c2b37-7d42-4622-8cbb-f2feb6db16ee",
@@ -7056,7 +7056,7 @@
       "No, perquè les mostres digitals sempre són invàlides."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d9d5b0fb-6f36-4aa9-900d-8cd52ba61e1f",
@@ -7069,7 +7069,7 @@
       "Sistemàtic sense registrar el tipus de visita"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8d698cd4-9055-4c43-b6f7-e147d7ccf644",
@@ -7082,7 +7082,7 @@
       "Mostreig de conveniència a la botiga"
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "aa47cf50-b90b-47d4-b057-b340b210d265",
@@ -7095,7 +7095,7 @@
       "Base temporal excessivament precisa"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4fa5c101-b6fc-4abc-a6da-97f2a68954a6",
@@ -7108,7 +7108,7 @@
       "Absència de dades sociodemogràfiques"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a41566ec-8c42-49a3-8b56-61be42af2f03",
@@ -7121,7 +7121,7 @@
       "La base temporal de les preguntes"
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "db8bf864-f60f-4929-8982-0231d5387da5",
@@ -7134,7 +7134,7 @@
       "No, perquè l’observació no registra conductes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d6b26001-fb25-466b-b4c4-44450cf212a7",
@@ -7147,7 +7147,7 @@
       "Traslladar totes les preguntes sensibles al principi."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f52d6b56-ee02-4143-91e7-2a1785cec2f8",
@@ -7160,7 +7160,7 @@
       "Quan la ciutadania valida els projectes definits pels professionals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d503bac6-42d0-4ab1-9019-a933f9c4a842",
@@ -7173,7 +7173,7 @@
       "Limitar la participació als aspectes de comunicació i difusió."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d8a56eae-140a-4d3b-a211-e761605798a0",
@@ -7186,7 +7186,7 @@
       "Col·laboració."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "afcb3ac8-150e-41bd-9252-f2d9e6401521",
@@ -7199,7 +7199,7 @@
       "La capacitat de decisió es comparteix de manera estable."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "38695842-e914-4224-a99b-d5a163058c4f",
@@ -7212,7 +7212,7 @@
       "Un òrgan comunitari amb capacitat estable per assignar recursos."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "22d72949-adb4-434d-a5f7-776949aa86c7",
@@ -7225,7 +7225,7 @@
       "En la cocreació el museu deixa d’assumir responsabilitats tècniques."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "10bfac2a-5b6e-4f81-9df9-932a3f93b5dc",
@@ -7238,7 +7238,7 @@
       "La capacitat de decisió i la responsabilitat compartides de manera estable."
     ],
     "correctOption": 3,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1abc47bf-a30e-4e41-ac44-03c26a3691c4",
@@ -7251,7 +7251,7 @@
       "Només es pot parlar de participació quan la ciutadania adopta la decisió final."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2cbfdb51-1e35-4d8a-9a20-7580343e223e",
@@ -7264,7 +7264,7 @@
       "Evitar intervenir en els conflictes entre interpretacions."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c9d0713a-54f4-4610-ab3e-9f1f2e185f2f",
@@ -7277,7 +7277,7 @@
       "Està formada exclusivament per entitats legalment constituïdes."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4b69b2ba-b30b-4b38-8c07-0614bb249eb4",
@@ -7290,7 +7290,7 @@
       "Comunitats visitants, usuàries i no usuàries."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3955f293-bcd6-4f61-82e3-c0c86f5b0831",
@@ -7303,7 +7303,7 @@
       "Un protocol obligatori per crear òrgans de cogovernança."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5e4f005f-9445-4d6e-8de1-4fb8fb05766a",
@@ -7316,7 +7316,7 @@
       "Substituir les xarxes territorials per una gestió centralitzada."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "31e99712-0d17-4d26-9158-49cbf03b776a",
@@ -7329,7 +7329,7 @@
       "Quin percentatge del pressupost es destina a activitats?"
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b03956f5-ed8a-4816-bd57-25189c624c4e",
@@ -7342,7 +7342,7 @@
       "Creixement de les col·leccions."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6ec811d9-0fac-4890-9a39-915c548055da",
@@ -7355,7 +7355,7 @@
       "Perquè poden delegar la programació a les associacions locals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "14761543-b862-4257-a663-4a48ae504fe6",
@@ -7368,7 +7368,7 @@
       "Limitar les col·laboracions a institucions estrictament culturals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a66ad905-2ac7-4145-aca4-fd68ef85e943",
@@ -7381,7 +7381,7 @@
       "Un sistema de representació de les associacions locals."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "35a10938-f2fb-4994-8db6-b1e707f7ee7b",
@@ -7394,7 +7394,7 @@
       "Demanar-los que s’integrin en una entitat abans de participar."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b68a5f43-0b7d-4def-aadd-0c5c350ce084",
@@ -7407,7 +7407,7 @@
       "La seva utilització com a representant simbòlica de tota una identitat."
     ],
     "correctOption": 3,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f084dbef-a79f-4966-9263-af789532066a",
@@ -7420,7 +7420,7 @@
       "Determinar els indicadors d’impacte social."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2143ea04-b822-4b4b-99bf-3db465a1514b",
@@ -7433,7 +7433,7 @@
       "Després de la prova pilot, per validar-ne els resultats."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ae25d1e0-cbcc-4124-aa25-23684839ca39",
@@ -7446,7 +7446,7 @@
       "Els canals de comunicació externa i el nombre d’assistents previst."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3e2841e0-527e-45a4-83d5-a3fb6ff53ee7",
@@ -7459,7 +7459,7 @@
       "Ha de ser elaborada pel museu abans de contactar amb els agents."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "85374b2f-1cd9-4f29-ad4d-96a46ebe6c98",
@@ -7472,7 +7472,7 @@
       "Millorar el valor públic de la institució."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "81e6917f-ea74-4234-8a7c-23f5beedca92",
@@ -7485,7 +7485,7 @@
       "Assemblea deliberativa."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "57d08897-3532-41b3-8e35-34b5afa8d2f7",
@@ -7498,7 +7498,7 @@
       "Que participi en l’avaluació dels resultats."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "68d51482-d192-4880-a713-f333e71ceecb",
@@ -7511,7 +7511,7 @@
       "Produir els materials definitius abans de recollir els testimonis."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5f1f7e6c-cc29-486b-99a9-19ffe9b14953",
@@ -7524,7 +7524,7 @@
       "Reduir el nombre de sessions necessàries."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1eb84d1b-565b-4dfa-9aab-b23eb29e7a2b",
@@ -7537,7 +7537,7 @@
       "Adoptar la decisió final quan els participants no arriben a un consens."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3b74e5a1-1e13-4f87-9111-4e57be361573",
@@ -7550,7 +7550,7 @@
       "Perquè la facilitació correspon exclusivament a professionals externs."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "41882f05-e9c4-49c2-88b2-b14d12eeaead",
@@ -7563,7 +7563,7 @@
       "Les opinions dels participants, sense interpretació del museu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6e72f9b1-e71c-4e06-81e5-64a558fd4869",
@@ -7576,7 +7576,7 @@
       "Traslladar la direcció operativa al grup motor."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5f3a518a-4814-4949-a425-1aa729cbf9b5",
@@ -7589,7 +7589,7 @@
       "Han de formalitzar-se obligatòriament com a professionals externs."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "87cd9d67-d07e-4fd5-83ef-8314543a1f5d",
@@ -7602,7 +7602,7 @@
       "Els projectes temporals no poden generar relacions comunitàries sostenibles."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b9b01bcc-4a39-4f1b-be8e-dac4759611ff",
@@ -7615,7 +7615,7 @@
       "Prioritzar la participació presencial perquè facilita el debat."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "76b70a9f-9fd6-4e1f-afd1-16f20e130087",
@@ -7628,7 +7628,7 @@
       "Publicar-los provisionalment i retirar-los si algú s’hi oposa."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "99ca63ad-1993-457a-a82d-31bf23b3110a",
@@ -7641,7 +7641,7 @@
       "Sobrerrepresentació."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "aad0abb5-a99b-4e4c-8ea7-be2cd26d81a1",
@@ -7654,7 +7654,7 @@
       "Quan els participants no intervenen en totes les tasques d’execució."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fa176c0a-ba2b-4b3a-9c3e-415cad43da57",
@@ -7667,7 +7667,7 @@
       "Xarxa: satisfacció individual; qüestionari final únic."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4b490360-2fed-4e67-b678-ccbb9c5c6cbc",
@@ -7680,7 +7680,7 @@
       "És una col·laboració perquè el museu ha compartit informació institucional."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c071b3c8-2201-4e04-b6c2-6004ac3cfcf8",
@@ -7693,7 +7693,7 @@
       "Traslladar al grup participant tota la responsabilitat sobre la conservació documental."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1eee5ce8-d2d6-4321-a23e-687afbcbca15",
@@ -7706,7 +7706,7 @@
       "Projectisme, perquè el grup motor té una durada limitada."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "971524ff-04ca-4abf-a3f8-1883617e0225",
@@ -7719,7 +7719,7 @@
       "Dividir el grup segons el nivell de coneixements acadèmics."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ab7a57a0-addb-498f-8ea3-7d8e68b6fd16",
@@ -7732,7 +7732,7 @@
       "Una diagnosi massa centrada en els actius comunitaris."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "906ae174-514c-4098-8cae-f775deab2b15",
@@ -7745,7 +7745,7 @@
       "Evitar explicar els límits fins que finalitzi el procés."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f985f79b-88fa-4dd6-9fe3-51429f6b1ba3",
@@ -7758,7 +7758,7 @@
       "Reduint els continguts accessibles per agilitzar el debat."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ee81b1b4-bc26-4d09-97d7-5b81e4bf6f52",
@@ -7771,7 +7771,7 @@
       "Presentar totes les afirmacions com si tinguessin el mateix valor factual."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "14c6346c-e3fe-4ed0-aefc-f2375b5fd48a",
@@ -7784,7 +7784,7 @@
       "La manca de continuïtat és irrellevant si s’ha executat el pressupost."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "74f3dd91-7398-4f86-bcce-12fbc177b652",
@@ -7836,7 +7836,7 @@
       "Els deures són recomanacions sense conseqüències jurídiques."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6fe93e0a-b67b-4887-88c7-f9ae082ec94f",
@@ -7862,7 +7862,7 @@
       "A mantenir indefinidament les mateixes funcions, sense possibilitat de reorganització."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6c586f5d-6ebf-46b6-9d98-a4d66a62e717",
@@ -7875,7 +7875,7 @@
       "Publicitat, proximitat i discrecionalitat."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "60ddd2a0-3f33-46a1-b9d7-3a51d34055c5",
@@ -7888,7 +7888,7 @@
       "Negociats individualment amb cada empleat."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "198c082a-01cf-4eee-8adf-3324018a586c",
@@ -7901,7 +7901,7 @@
       "Renunciar a les tasques que no generin una retribució complementària."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "de7bebaf-c6c2-44a7-a5c3-c9cda119e8a0",
@@ -7914,7 +7914,7 @@
       "A substituir les instruccions del superior pel seu criteri personal."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c09d105b-2f5f-4074-8ec4-be8309b769ba",
@@ -7927,7 +7927,7 @@
       "Només quan l’empleat obté una sentència favorable."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "146daad0-f2df-47a5-915e-8cd2975424d3",
@@ -7940,7 +7940,7 @@
       "Únicament al personal funcionari de carrera."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "49165dfe-a4f3-4749-86b8-56679f555c33",
@@ -7953,7 +7953,7 @@
       "La prohibició de qualsevol supervisió del treball."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "81b61a97-1d74-479f-8322-6c2a5d28291a",
@@ -7966,7 +7966,7 @@
       "El dret a impedir qualsevol control sobre els dispositius facilitats per l’Administració."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "04abaf65-acf1-4842-bf72-2590ff2eea7b",
@@ -7979,7 +7979,7 @@
       "No es reconeix en l’àmbit de l’ocupació pública."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "42ab6b5a-68ec-4c42-9023-eb74c1782b5c",
@@ -7992,7 +7992,7 @@
       "La substitució dels serveis de prevenció per criteris individuals."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fa7ec2e5-7197-469d-8cb9-57318c37e841",
@@ -8005,7 +8005,7 @@
       "Deixar d’aplicar les incompatibilitats professionals."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "970ef96c-1398-440f-9df8-a52f469e54e6",
@@ -8018,7 +8018,7 @@
       "Defensa jurídica, vaga, intimitat i associació professional."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2ae67bd4-04c3-4594-990b-65c99b12bb04",
@@ -8031,7 +8031,7 @@
       "L’autorització individual de cada superior jeràrquic."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1455e7d2-c08a-4057-bdff-f8f3d19891ad",
@@ -8044,7 +8044,7 @@
       "Exclusivament per mitjà de les juntes de personal."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0b250974-b0ab-477b-9d81-f7d10452d596",
@@ -8057,7 +8057,7 @@
       "Prioritzar els objectius interns encara que contradiguin una norma jurídica."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "78cb5e59-e95a-4be0-8cf2-e74434bfb96e",
@@ -8070,7 +8070,7 @@
       "Obligacions jurídiques, recomanacions i protocols interns."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0a745b6b-8414-4274-ad77-84150bf6c25a",
@@ -8083,7 +8083,7 @@
       "Només s’apliquen quan no existeix una norma interna."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c7a3f3dd-a01b-48b8-9519-d61dfd116307",
@@ -8096,7 +8096,7 @@
       "Confiança política, rapidesa i flexibilitat normativa."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "28643c2a-3d29-4a28-a7af-8839cefe9bb8",
@@ -8109,7 +8109,7 @@
       "Productivitat, benefici econòmic i competitivitat."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "77143112-2583-4be2-898a-54afc5ac8073",
@@ -8122,7 +8122,7 @@
       "Aplicar criteris diferents quan ho sol·liciti un càrrec públic."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c435e5b5-21aa-49b0-9523-a3c275bd5222",
@@ -8135,7 +8135,7 @@
       "Exclusivament amb les persones de la mateixa unitat."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f35a4f96-3e72-42fc-bddc-e63ca653088c",
@@ -8148,7 +8148,7 @@
       "Delegar informalment la signatura, però continuar tramitant-lo."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "35082add-af95-46f2-a266-97ebe5f46ebd",
@@ -8161,7 +8161,7 @@
       "Considerar-les compatibles automàticament si no utilitzen instal·lacions públiques."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "991e2867-7359-4428-9f31-463ab7318fd8",
@@ -8174,7 +8174,7 @@
       "Pot participar-hi quan el benefici sigui indirecte."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1e636b14-1d54-4394-a694-972a74cc52d6",
@@ -8187,7 +8187,7 @@
       "Informar la ciutadania sobre els seus drets."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3faff9f4-471d-4185-b9e9-ff09e0fc784c",
@@ -8200,7 +8200,7 @@
       "Prioritat política i flexibilitat procedimental."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "40176548-a9ca-4ea8-8cda-b690050feff6",
@@ -8213,7 +8213,7 @@
       "Adoptar mesures perquè els procediments es resolguin dins del termini."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e155d116-5478-49ef-9faf-f52403a01a75",
@@ -8226,7 +8226,7 @@
       "Traslladar automàticament els expedients complexos a altres unitats."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8c90a246-a01d-4aae-b920-f2b850b21137",
@@ -8239,7 +8239,7 @@
       "Difondre-la quan consideri que pot ser d’interès social."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a51ea275-0bd4-4e58-b5c2-9540a41aae0a",
@@ -8252,7 +8252,7 @@
       "Demanar als companys que decideixin per votació."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "60b390fd-c608-4928-b4ed-90761e3e18f9",
@@ -8265,7 +8265,7 @@
       "Informar només quan ho autoritzi expressament el responsable polític."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f9bbd152-b227-4d80-a3f3-3dda8fb21683",
@@ -8278,7 +8278,7 @@
       "Utilitzar-los lliurement fora de l’horari laboral."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2c5dbb9d-d891-465c-a8b9-a000585d6a9b",
@@ -8291,7 +8291,7 @@
       "Acceptar-los quan no es pugui determinar el seu valor econòmic exacte."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0f4f22fc-6ff9-4cf9-8302-3f7b3f599aad",
@@ -8304,7 +8304,7 @@
       "Traslladar-los sempre al superior jeràrquic abans de finalitzar la jornada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c7adaf2d-4509-4cc6-871e-ad634978b47d",
@@ -8343,7 +8343,7 @@
       "Esperar que la persona interessada presenti una reclamació."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d406db9d-1971-4367-968d-3e57294f707d",
@@ -8369,7 +8369,7 @@
       "Només seria incorrecte si utilitzés informació reservada."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5b96df3b-e3c3-4d17-84f5-6d2dc985f51c",
@@ -8382,7 +8382,7 @@
       "Acceptar-lo i comunicar-ho posteriorment al seu superior."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "fe1cf9fb-89b7-4ab5-9958-f58984538a4a",
@@ -8395,7 +8395,7 @@
       "El dret de reunió i la llibertat sindical."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a56d416a-c28d-47a0-95dd-ccc6d62f1a1b",
@@ -8408,7 +8408,7 @@
       "No, però només si la ciutadana presenta una reclamació formal."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "22b0cf11-62f6-49fa-8a33-640266df3682",
@@ -8421,7 +8421,7 @@
       "El dret d’associació professional."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "abf87dab-0d71-4665-bc81-2a2453f8af7e",
@@ -8434,7 +8434,7 @@
       "Només tindrà dret a assistència després que s’hagi dictat sentència favorable."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "98f02be4-b42f-4020-8483-8e515e8a5bb2",
@@ -8447,7 +8447,7 @@
       "Només seria incorrecte si alguna persona candidata presenta un recurs."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "bab98faf-a44e-41f6-ac99-a5790a72471c",
@@ -8460,7 +8460,7 @@
       "Una plataforma web que publica la programació cultural."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3033c8d1-3590-4657-a971-9e3d13727bc7",
@@ -8473,7 +8473,7 @@
       "Perquè permet eliminar progressivament tots els canals presencials."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f4044e3b-5733-47c7-9e8c-a5d1a02b5252",
@@ -8486,7 +8486,7 @@
       "Validar les entrades a l’equipament."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "cc0914c8-00b4-4314-b0ae-b2a90429ce6c",
@@ -8499,7 +8499,7 @@
       "Passarel·la de pagament."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9b0ef0d1-a6a0-44fb-a359-90c1f1ba5f94",
@@ -8512,7 +8512,7 @@
       "Configurar l’aforament de les visites guiades."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b3be188e-5dc7-45b3-9b50-6246b386f02e",
@@ -8525,7 +8525,7 @@
       "Es facilita la conciliació automàtica de les operacions."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "cc4f3e4d-d74e-46bd-a8c8-fc6db91ea7f5",
@@ -8538,7 +8538,7 @@
       "Conèixer els públics mitjançant indicadors."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "589bc0a9-a236-4af2-a610-385c2f11c059",
@@ -8551,7 +8551,7 @@
       "Vincular automàticament totes les compres a un perfil de CRM."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f8863848-6bee-48b0-8ad1-15c0cc671248",
@@ -8564,7 +8564,7 @@
       "Programació, comunicació, compra, control comptable i arxiu."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "73f2f8ec-ea92-4ccf-9631-4cde552bab85",
@@ -8577,7 +8577,7 @@
       "Conciliar els cobraments i elaborar informes."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "feedfd44-0d33-4772-abf5-d78390d11050",
@@ -8590,7 +8590,7 @@
       "Espai, data, responsable intern i dades personals dels futurs assistents."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "842f5f68-ecc9-44cc-a266-d884e38797a1",
@@ -8603,7 +8603,7 @@
       "Una única capacitat conjunta, independentment dels aforaments de cada espai."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "51330930-387c-40eb-a7ff-1ca556f07161",
@@ -8616,7 +8616,7 @@
       "Una entrada combinada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6019a1a1-a99d-4f65-b285-aaaff65facac",
@@ -8629,7 +8629,7 @@
       "Tancant la venda en línia d’una de les sessions."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4d4b69f7-481c-441f-bcd2-c2e951088fdc",
@@ -8642,7 +8642,7 @@
       "Perquè s’han de convertir posteriorment en entrades de pagament."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "367b037d-22bc-4505-ba2a-df6689dd5c2d",
@@ -8655,7 +8655,7 @@
       "Permetre que qualsevol perfil modifiqui les tarifes davant d’una incidència."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ebaa8229-1ed2-4329-9ee3-999eb70bb354",
@@ -8668,7 +8668,7 @@
       "Les reserves telefòniques no han de consumir aforament fins al pagament."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ee933330-2a9b-4fb5-8fa8-9cdc1beca366",
@@ -8681,7 +8681,7 @@
       "Cada canal ha d’oferir activitats diferents per evitar conflictes d’inventari."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "73e9892a-f968-43bf-9a05-d99b3f743b40",
@@ -8694,7 +8694,7 @@
       "Es presumeix acceptada quan la persona facilita el correu electrònic."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "44f242a7-0a89-4c01-b0ba-3f60b2b5f4d4",
@@ -8707,7 +8707,7 @@
       "Les dades tècniques de l’error produït a la passarel·la."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9cf60002-c488-41e1-ba5a-0cd0973fc71f",
@@ -8720,7 +8720,7 @@
       "Consentiment comercial de tots els membres del grup."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4e0615b2-61b4-406f-9f0e-5f84d11f5ed3",
@@ -8733,7 +8733,7 @@
       "Fer-los obligatoris per conèixer millor el grup."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f19cfaa5-e0ae-4bc2-9ece-8425c7221d88",
@@ -8746,7 +8746,7 @@
       "Les ha de conservar fins que finalitzi el termini de validesa de l’entrada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "226f58a5-b223-4a98-b7b4-e3c6bbeebca9",
@@ -8759,7 +8759,7 @@
       "Verificar l’acreditació de les entrades reduïdes."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "769cacc6-9aee-483e-b152-211fffc912ab",
@@ -8772,7 +8772,7 @@
       "Del nombre màxim de persones que pot atendre la taquilla."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "52ea28b5-af68-43ad-a2e6-b440dd3bfe38",
@@ -8785,7 +8785,7 @@
       "Les entrades venudes només computen després de ser validades."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0eb075d8-f887-4303-9e66-c842aea44549",
@@ -8798,7 +8798,7 @@
       "Per reduir el nombre de validacions que ha de fer el personal."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ce32bcb4-cfed-4282-9d55-f75652c51839",
@@ -8811,7 +8811,7 @@
       "Les cancel·lacions comunicades abans de l’activitat."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a93a9358-ddae-484d-bf99-17da4e1ab4da",
@@ -8824,7 +8824,7 @@
       "Cobrar l’activitat després de comprovar l’absència."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "392bb254-84df-4157-8062-17425b747338",
@@ -8837,7 +8837,7 @@
       "La sessió per a la qual s’ha emès."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "846c3e14-cf22-47d3-b966-03dd5ea11c4a",
@@ -8850,7 +8850,7 @@
       "Enviar automàticament les dades del visitant al CRM."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c132bed2-f8a0-4091-aa89-3b8b39c302d2",
@@ -8863,7 +8863,7 @@
       "Només poden aplicar-se a les entrades gratuïtes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "455d05f7-b0df-44e1-9342-30584f3840e0",
@@ -8876,7 +8876,7 @@
       "La substitució definitiva dels codis digitals per llistes impreses."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0c156e8c-c38e-416f-b924-9267a8289889",
@@ -8889,7 +8889,7 @@
       "Traslladar sempre el cas a un perfil supervisor."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a942e186-52a8-412f-977a-836d0e011280",
@@ -8902,7 +8902,7 @@
       "Per eliminar les operacions que han necessitat una excepció."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8b04d5a2-e762-4552-b202-ae2852fe92ae",
@@ -8915,7 +8915,7 @@
       "L’aplicació que permet exportar dades a altres eines."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ce46963d-ed62-42c1-bbb6-734424f669c3",
@@ -8928,7 +8928,7 @@
       "Ha de poder associar-se sempre a una persona concreta."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d9962502-2801-4225-aca2-479d4d88beb9",
@@ -8941,7 +8941,7 @@
       "Entrades web dividides entre entrades totals, multiplicat per cent."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3396042e-3edf-451f-9040-bf0f4344b27f",
@@ -8954,7 +8954,7 @@
       "Les dades de compra no estan subjectes a la normativa de protecció de dades."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b45afcae-c895-4227-b253-ce4be6d01f81",
@@ -8967,7 +8967,7 @@
       "Exclusivament digital per assegurar la uniformitat del servei."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e514143d-2372-475f-934b-cca485ce6639",
@@ -8993,7 +8993,7 @@
       "Eliminar qualsevol sistema de reserva per a les activitats gratuïtes."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c92fecd0-4f1a-44e2-ab80-baf39b0807a9",
@@ -9019,7 +9019,7 @@
       "Les tarifes reduïdes haurien de validar-se automàticament amb dades personals."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "06cf396c-0075-4bb6-8f4a-49938046b096",
@@ -9032,7 +9032,7 @@
       "El sistema de tarifes i acreditacions."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6da24e3c-2aa9-4f22-a0ae-89807c9720d5",
@@ -9045,7 +9045,7 @@
       "Conservar la informació, però limitar-la al personal de taquilla."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "7c4b471b-32ec-4203-93c2-6e08402f2504",
@@ -9071,7 +9071,7 @@
       "Substituir-la per una visita general amb més places."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "7988871a-1101-43ea-81af-99ee7231c4a9",
@@ -9084,7 +9084,7 @@
       "Retornar automàticament l’import sense contactar amb la persona."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "d978f9af-1bec-4dcb-914d-f6ef5d1b16d0",
@@ -9110,7 +9110,7 @@
       "La gestió administrativa del personal i dels proveïdors."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "29537582-b2ca-4163-b126-61913b6e6f1f",
@@ -9123,7 +9123,7 @@
       "El Tema XV substitueix els procediments tecnològics explicats al Tema XIV."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "be84bfbf-0c6e-4c45-98e6-bdc6246b4058",
@@ -9136,7 +9136,7 @@
       "Determina automàticament les excepcions que pot aplicar el personal."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "85b31377-489a-42ae-984f-f7c8055a1046",
@@ -9149,7 +9149,7 @@
       "Coherència multicanal."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1d25f8ae-edcf-4b28-9b74-38cbf287bb33",
@@ -9162,7 +9162,7 @@
       "Centralitzar totes les consultes a la taquilla presencial."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "77bcbbc1-558e-4e12-ab40-13042388c484",
@@ -9175,7 +9175,7 @@
       "Augmentant les mesures de control quan hi ha molta afluència."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3f24b490-a431-4cfe-a921-013f1fb8c008",
@@ -9188,7 +9188,7 @@
       "El registre d’incidències."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9c80f9fa-ec18-4339-9670-afd09b873392",
@@ -9201,7 +9201,7 @@
       "El determina el responsable de taquilla al començament de cada jornada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "779d41f6-0faa-46b7-80cf-0d0989109d7a",
@@ -9214,7 +9214,7 @@
       "Les dades d’assistència del mes anterior i les enquestes de satisfacció."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e312c05e-263c-4440-8135-a15f9aab85fb",
@@ -9227,7 +9227,7 @@
       "Comunicar només els canvis produïts des del dia anterior."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "7e213386-80b7-4713-873d-6ff16fb4e510",
@@ -9240,7 +9240,7 @@
       "Quan el responsable de l’equip no és present."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3adfb93c-6468-432d-9021-e7ae0924fe58",
@@ -9253,7 +9253,7 @@
       "Fer el tancament provisional de la caixa."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8ffd80f5-5e5f-4ea3-ab8c-1930f982a9d0",
@@ -9266,7 +9266,7 @@
       "Quan el sistema de venda en línia permet validar entrades."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "a588e02a-e638-4d5f-8008-7738ad01dcf3",
@@ -9279,7 +9279,7 @@
       "Perquè substitueix les reunions de coordinació entre àrees."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e0c6594c-036b-4baf-80b5-d9debc78bcd9",
@@ -9292,7 +9292,7 @@
       "Perquè el personal pot modificar les condicions de visita segons cada persona."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "2676b8f7-d0c6-4bfb-b77a-8eac14a20fa8",
@@ -9305,7 +9305,7 @@
       "Verificar les dades personals del visitant."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5dd8e910-2f1f-4b58-b8f4-84eeef0015ca",
@@ -9318,7 +9318,7 @@
       "Únicament en les compres efectuades per internet."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "352d0dbd-0a11-4f71-b372-76223330261a",
@@ -9331,7 +9331,7 @@
       "Una tarifa específica per a les reserves telefòniques."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "184a8652-e80c-4e9d-99a3-71c61dd7a404",
@@ -9344,7 +9344,7 @@
       "S’han d’anotar exclusivament al tancament de caixa."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "69f4abc4-747c-49c7-ba93-a4b1a4a36586",
@@ -9357,7 +9357,7 @@
       "Traslladar qualsevol incidència al responsable sense intentar identificar-la."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "524a5c5f-e0c8-4a5e-a7e5-ee6478fb3aa7",
@@ -9370,7 +9370,7 @@
       "La venda consumeix aforament, però la reserva confirmada no."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b9899c48-7949-47cb-a419-52f1d8b1a1ed",
@@ -9383,7 +9383,7 @@
       "Perquè les reserves confirmades no necessiten cap seguiment."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "43849916-cdd0-4550-b130-21f61327efcb",
@@ -9396,7 +9396,7 @@
       "Només quan el visitant demani una tarifa reduïda."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f8b1e6d7-201b-4817-bcfa-d8d59fd94ee8",
@@ -9409,7 +9409,7 @@
       "Preferències personals i experiència cultural de cada participant."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "dc8da6c1-6c74-4ca6-8c21-dca1df1796ce",
@@ -9422,7 +9422,7 @@
       "Reservar tot l’equipament als grups fins que finalitzin."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "88afb6d1-376b-4184-a009-eb77822b9dca",
@@ -9435,7 +9435,7 @@
       "Amb comunicació, per difondre l’activitat a altres centres."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "3ec3bb71-0744-41f5-9566-c9398dac51b4",
@@ -9448,7 +9448,7 @@
       "Demanda prevista."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8928ed2c-69a5-4851-b045-4b32eadc18ec",
@@ -9461,7 +9461,7 @@
       "Només s’utilitza per a activitats gratuïtes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e40e9fa2-a8dc-4d70-a1b9-08318a247dcc",
@@ -9474,7 +9474,7 @@
       "Perquè el cupo de venda pot ser inferior a l’aforament."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "e64ddea4-11ca-4afd-b734-c117cffcbaaa",
@@ -9487,7 +9487,7 @@
       "L’existència de tarifes gratuïtes."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "6caa5ded-02e9-43f0-9b6c-fb0ea4ce9125",
@@ -9500,7 +9500,7 @@
       "Cap; cal contrastar fonts i definir qui monitoritza la situació."
     ],
     "correctOption": 3,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ecb6cac3-9d77-4a23-ac82-9bfc3d7fc04d",
@@ -9513,7 +9513,7 @@
       "Augmentar temporalment el límit mentre s’organitza la cua."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "134512b6-f544-4557-b07c-75ec611151a6",
@@ -9526,7 +9526,7 @@
       "Permetent primer l’entrada de les persones sense reserva."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "5cb5378b-0b0d-479c-99b6-7f25965671e2",
@@ -9539,7 +9539,7 @@
       "Perquè el personal de recepció no pot intervenir en els fluxos interns."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "ce1865ff-7485-49f8-ba0f-3f56ca13f7ee",
@@ -9552,7 +9552,7 @@
       "Informant únicament les persones que no disposen de reserva."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "0e189e3e-6ea7-4dea-9c5f-fb0579682259",
@@ -9565,7 +9565,7 @@
       "La causa definitiva, encara que no estigui confirmada."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "735a53e7-e9db-4f02-a4e3-5f385f67cf14",
@@ -9578,7 +9578,7 @@
       "Exclusivament els canvis respecte del programa oficial."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "b80b5b24-f76e-417d-8924-0a0147e2a1d2",
@@ -9591,7 +9591,7 @@
       "Només les emergències necessiten un procediment establert."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "286eb85c-7676-400f-acba-e73708b9f8a4",
@@ -9604,7 +9604,7 @@
       "Coordinar-se amb els equips d’intervenció."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "c35fffad-c378-4685-a5d0-7af14a1b683d",
@@ -9617,7 +9617,7 @@
       "Recollir queixes, comparar-les i substituir el procediment anterior."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8d76b0e0-d1aa-4aca-938e-d148e1236040",
@@ -9630,7 +9630,7 @@
       "Permetre l’accés només a les persones amb reserva."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "1bb7fdd0-a7e0-454b-9e2a-3fab493610fb",
@@ -9643,7 +9643,7 @@
       "Traçabilitat i ocupació simultània."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "67a37aff-3f4b-4921-90b0-02a7bd176b1f",
@@ -9656,7 +9656,7 @@
       "Cancel·lar automàticament la reserva completa."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "8fc1ab30-a578-4303-a635-552312d34a73",
@@ -9669,7 +9669,7 @@
       "No, perquè només les reserves permeten calcular l’ocupació."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "64db3c84-08a6-413c-a5be-33fdd0947219",
@@ -9682,7 +9682,7 @@
       "Suspendre la venda presencial fins que hagin entrat els grups."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "9e0ec241-bfdd-4a93-9a2c-dce9325f7e0b",
@@ -9695,7 +9695,7 @@
       "Fer-li una devolució en efectiu pel mateix import."
     ],
     "correctOption": 2,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "f77401e3-95b9-4f71-a065-bb9aeaee673b",
@@ -9708,7 +9708,7 @@
       "El trasllat de totes les reclamacions al departament de comptabilitat."
     ],
     "correctOption": 0,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "4d54205e-4c0f-4fb4-acbe-2a06ad6517c9",
@@ -9721,7 +9721,7 @@
       "Tancar tot el museu fins que l’ascensor sigui reparat."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "24a373ae-f5c0-4f9e-be54-4758c14d5970",
@@ -9734,7 +9734,7 @@
       "Substituir la mitjana pel nombre total de visitants."
     ],
     "correctOption": 1,
-    "explanation": ""
+    "explanation": null
   },
   {
     "id": "87f37261-eca0-4e13-a47b-48b9b19cc63a",

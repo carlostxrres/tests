@@ -24,7 +24,7 @@ type QuestionJson = {
   statement: string;
   options: string[];
   correctOption: number;
-  explanation: string;
+  explanation: string | null;
 };
 
 function readJson<T>(file: string): T {

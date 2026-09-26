@@ -27,7 +27,7 @@ export type Database = {
       questions: {
         Row: {
           correct_option: number
-          explanation: string
+          explanation: string | null
           id: string
           options: string[]
           statement: string
@@ -35,7 +35,7 @@ export type Database = {
         }
         Insert: {
           correct_option: number
-          explanation?: string
+          explanation?: string | null
           id?: string
           options: string[]
           statement: string
@@ -43,7 +43,7 @@ export type Database = {
         }
         Update: {
           correct_option?: number
-          explanation?: string
+          explanation?: string | null
           id?: string
           options?: string[]
           statement?: string
