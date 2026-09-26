@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@trickfilm400/rollup-plugin-off-main-thread': 3.0.0-pre1
+
 importers:
 
   .:

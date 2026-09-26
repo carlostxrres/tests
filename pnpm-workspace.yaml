@@ -2,5 +2,18 @@ allowBuilds:
   "@biomejs/biome": true
   esbuild: true
   supabase: true
+trustPolicy: no-downgrade
+# Audited 2026-09-26: each version predates provenance for its own release line
+# and was published by that package's established maintainers, so the "trust
+# downgrade" is an artifact of provenance arriving later, not a takeover. The
+# workbox fork landed upstream via GoogleChrome/workbox#3446.
+trustPolicyExclude:
+  - semver@6.3.1
+  - reselect@5.1.1
+  - "@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1"
 minimumReleaseAgeExclude:
   - dynamic-icons@0.1.0
+overrides:
+  # Single-maintainer prerelease fork in the service-worker build chain; pinned
+  # to the audited version so it cannot drift to another prerelease on install.
+  "@trickfilm400/rollup-plugin-off-main-thread": "3.0.0-pre1"
