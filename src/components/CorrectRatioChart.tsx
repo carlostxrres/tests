@@ -60,7 +60,7 @@ export function CorrectRatioChart({
         </PieChart>
       </ChartContainer>
       <output
-        className="absolute inset-0 flex items-center justify-center tracking-tighter font-mono text-xs font-medium tabular-nums"
+        className="absolute inset-0 flex items-center justify-center tracking-tighter text-xs font-medium tabular-nums"
         aria-label={ratio === null ? "Sin datos" : `${ratio}% correctas`}
       >
         {ratio === null ? "–" : `${ratio}%`}

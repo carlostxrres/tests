@@ -74,7 +74,7 @@ export function TestQuestionCard({
       aria-label={`Pregunta ${index + 1} de ${total}`}
     >
       <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-        <span className="font-mono tabular-nums">
+        <span>
           Pregunta {index + 1} de {total}
         </span>
         <span className="flex items-center gap-2">

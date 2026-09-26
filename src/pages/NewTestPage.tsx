@@ -318,7 +318,7 @@ function NewTestWizard({
                                 </ItemMedia>
                                 <ItemContent>
                                   <ItemTitle className="font-normal">
-                                    <span className="font-mono text-muted-foreground">
+                                    <span className="text-muted-foreground">
                                       {unit.number}.
                                     </span>{" "}
                                     {unit.name}
@@ -375,7 +375,7 @@ function NewTestWizard({
                       aria-label="Número de preguntas"
                       className="flex-1"
                     />
-                    <output className="w-12 text-right font-mono text-lg tabular-nums">
+                    <output className="w-12 text-right text-lg tabular-nums">
                       {count}
                     </output>
                   </div>

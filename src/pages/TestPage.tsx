@@ -246,7 +246,7 @@ function TestRunner({ test }: { test: TestWithStats }) {
                       <ItemGroup className="gap-1">
                         {units.map((unit) => (
                           <Item key={unit.id} size="xs" variant="muted">
-                            <ItemMedia className="w-6 justify-end font-mono text-xs text-muted-foreground">
+                            <ItemMedia className="w-6 justify-end text-xs tabular-nums text-muted-foreground">
                               {unit.number}
                             </ItemMedia>
                             <ItemContent>
@@ -264,19 +264,19 @@ function TestRunner({ test }: { test: TestWithStats }) {
           </div>
 
           <div className="flex items-center gap-2 text-xs">
-            <Badge variant="secondary" className="font-mono tabular-nums">
+            <Badge variant="secondary" className="tabular-nums">
               {answered}/{total} respondidas
             </Badge>
             {reveal && (
               <Badge
                 variant="outline"
-                className="border-success/30 font-mono text-success tabular-nums"
+                className="border-success/30 text-success tabular-nums"
               >
                 {correct}/{total} acertadas
               </Badge>
             )}
             {finished && unanswered > 0 && (
-              <Badge variant="outline" className="font-mono tabular-nums">
+              <Badge variant="outline" className="tabular-nums">
                 {unanswered} en blanco
               </Badge>
             )}

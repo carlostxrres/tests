@@ -94,7 +94,7 @@ const columns = columnHelper.columns([
     header: ({ column }) => <DataTableColumnHeader column={column} />,
     cell: ({ row }) => (
       <span className="block max-w-40 truncate text-xs" title={row.original.unit_name}>
-        <span className="font-mono text-muted-foreground">{row.original.unit_number}.</span>{" "}
+        <span className="text-muted-foreground tabular-nums">{row.original.unit_number}.</span>{" "}
         {row.original.unit_name}
       </span>
     ),

@@ -81,7 +81,7 @@ export function SyllabusPage() {
                       const count = questionsByUnit.get(unit.id) ?? 0;
                       return (
                         <Item key={unit.id} variant="outline" className="items-start">
-                          <ItemMedia className="w-6 justify-end self-start pt-0.5 font-mono text-sm text-muted-foreground">
+                          <ItemMedia className="w-6 justify-end self-start pt-0.5 tabular-nums text-sm text-muted-foreground">
                             {unit.number}
                           </ItemMedia>
                           <ItemContent className="gap-2">

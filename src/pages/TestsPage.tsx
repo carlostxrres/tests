@@ -35,7 +35,7 @@ function FeedbackBadge({ instant }: { instant: boolean }) {
 }
 
 const Fraction = ({ value, total }: { value: number; total: number }) => (
-  <span className="font-mono text-xs tabular-nums">
+  <span className="text-xs tabular-nums">
     {value}/{total}
   </span>
 );
@@ -110,7 +110,7 @@ const unitsColumn = columnHelper.accessor((t) => t.unit_ids.length, {
   id: "units",
   meta: { label: "Unidades" },
   header: ({ column }) => <DataTableColumnHeader column={column} />,
-  cell: ({ getValue }) => <span className="font-mono text-xs tabular-nums">{getValue()}</span>,
+  cell: ({ getValue }) => <span className="text-xs tabular-nums">{getValue()}</span>,
   sortFn: "basic",
 });
 

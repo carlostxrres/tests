@@ -34,7 +34,7 @@ export function QuestionOptions({ options, correctOption, choice }: Props) {
             <ItemMedia
               variant="icon"
               className={cn(
-                "size-7 self-start rounded-full border font-mono text-xs",
+                "size-7 self-start rounded-full border text-xs",
                 isCorrect && "border-success/40 bg-success/15 text-success",
                 isChoice &&
                   !isCorrect &&
