@@ -212,9 +212,6 @@ export function SubmissionsPage() {
           <XIcon data-icon="inline-end" />
         </Button>
       )}
-      {submissions.data && (
-        <p className="text-sm text-muted-foreground">{filtered.length} respuestas</p>
-      )}
       {submissions.isPending ? (
         <div className="flex flex-col gap-2">
           <Skeleton className="h-10 w-full" />
@@ -228,6 +225,7 @@ export function SubmissionsPage() {
           data={filtered}
           getRowId={(row) => row.id}
           initialSorting={[{ id: "timestamp", desc: true }]}
+          label="respuestas"
           empty={
             <Empty className="border-0">
               <EmptyHeader>

@@ -180,11 +180,6 @@ export function QuestionsPage() {
           />
         </div>
       </div>
-      {rows && (
-        <p className="text-sm text-muted-foreground">
-          {filtered.length} de {rows.length} preguntas
-        </p>
-      )}
       {isPending ? (
         <div className="flex flex-col gap-2">
           <Skeleton className="h-10 w-full" />
@@ -198,6 +193,8 @@ export function QuestionsPage() {
           data={filtered}
           getRowId={(row) => row.id}
           initialSorting={[{ id: "unit", desc: false }]}
+          label="preguntas"
+          totalCount={rows?.length ?? 0}
           empty={
             <Empty className="border-0">
               <EmptyHeader>

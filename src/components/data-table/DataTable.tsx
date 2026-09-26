@@ -34,6 +34,11 @@ type DataTableProps<TData extends RowData> = {
   empty?: ReactNode;
   className?: string;
   getRowId?: (row: TData) => string;
+  // Contador mostrado junto al botón "Columnas", ej. "12 de 40 preguntas".
+  // Sin `label` no se renderiza nada. Sin `totalCount` se renderiza
+  // "N label" sin "de total".
+  label?: string;
+  totalCount?: number;
 };
 
 // Sorting, pagination and column visibility over an already-filtered array.
@@ -49,6 +54,8 @@ export function DataTable<TData extends RowData>({
   empty,
   className,
   getRowId,
+  label,
+  totalCount,
 }: DataTableProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>(initialSorting);
   const [pagination, setPagination] = useState({ pageIndex: 0, pageSize });
@@ -77,7 +84,14 @@ export function DataTable<TData extends RowData>({
     <div className={cn("flex flex-col gap-3", className)}>
       {/* Outside the empty branch on purpose: a filter that matches nothing is
           exactly when the user may want a hidden column back. */}
-      <div className="flex justify-end">
+      <div className="flex items-center justify-end">
+        {label && (
+          <p className="mr-auto text-sm text-muted-foreground">
+            {totalCount === undefined
+              ? `${data.length} ${label}`
+              : `${data.length} de ${totalCount} ${label}`}
+          </p>
+        )}
         <DataTableViewOptions table={table} />
       </div>
       {data.length === 0 ? (
