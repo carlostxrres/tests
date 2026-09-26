@@ -82,12 +82,16 @@ export function QuestionPage() {
       <div className="flex flex-col gap-6 px-4">
         <QuestionOptions options={q.options} correctOption={q.correct_option} />
 
-        <section className="flex flex-col gap-2">
-          <h2 className="font-heading text-sm font-semibold text-muted-foreground">Explicación</h2>
-          <div className="typeset typeset-docs max-w-[37em]">
-            <p>{q.explanation}</p>
-          </div>
-        </section>
+        {q.explanation && (
+          <section className="flex flex-col gap-2">
+            <h2 className="font-heading text-sm font-semibold text-muted-foreground">
+              Explicación
+            </h2>
+            <div className="typeset typeset-docs max-w-[37em]">
+              <p>{q.explanation}</p>
+            </div>
+          </section>
+        )}
 
         <Separator />
 

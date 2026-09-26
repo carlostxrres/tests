@@ -89,12 +89,16 @@ export function SubmissionPage() {
       />
       <div className="flex flex-col gap-6 px-4">
         <QuestionOptions options={q.options} correctOption={q.correct_option} choice={s.choice} />
-        <section className="flex flex-col gap-2">
-          <h2 className="font-heading text-sm font-semibold text-muted-foreground">Explicación</h2>
-          <div className="typeset typeset-docs max-w-[37em]">
-            <p>{q.explanation}</p>
-          </div>
-        </section>
+        {q.explanation && (
+          <section className="flex flex-col gap-2">
+            <h2 className="font-heading text-sm font-semibold text-muted-foreground">
+              Explicación
+            </h2>
+            <div className="typeset typeset-docs max-w-[37em]">
+              <p>{q.explanation}</p>
+            </div>
+          </section>
+        )}
         <LinkButton variant="outline" className="w-fit" to={`/explore/questions/${q.id}`}>
           Ver pregunta y su historial
         </LinkButton>

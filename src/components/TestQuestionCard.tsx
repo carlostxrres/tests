@@ -127,10 +127,16 @@ export function TestQuestionCard({
 
       {showResult && (
         <div className="flex flex-col gap-3 rounded-xl border bg-card p-4">
-          <h3 className="font-heading text-sm font-semibold text-muted-foreground">Explicación</h3>
-          <div className="typeset typeset-docs max-w-[37em]">
-            <p>{question.explanation}</p>
-          </div>
+          {question.explanation && (
+            <>
+              <h3 className="font-heading text-sm font-semibold text-muted-foreground">
+                Explicación
+              </h3>
+              <div className="typeset typeset-docs max-w-[37em]">
+                <p>{question.explanation}</p>
+              </div>
+            </>
+          )}
           <Separator />
           <ExamUnitBreadcrumb
             examName={question.unit.exam.name}
