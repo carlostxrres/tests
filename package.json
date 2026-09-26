@@ -28,6 +28,7 @@
     "class-variance-authority": "^0.7.1",
     "cn": "^0.3.0",
     "date-fns": "^4.4.0",
+    "dynamic-icons": "^0.1.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.46.0",
     "morphicons": "^1.7.1",

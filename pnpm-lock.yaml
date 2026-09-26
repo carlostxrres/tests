@@ -47,6 +47,9 @@ importers:
       date-fns:
         specifier: ^4.4.0
         version: 4.4.0
+      dynamic-icons:
+        specifier: ^0.1.0
+        version: 0.1.0(morphicons@1.7.1(react@19.3.0))(react@19.3.0)
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.3.0)
@@ -2012,6 +2015,13 @@ packages:
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
+
+  dynamic-icons@0.1.0:
+    resolution: {integrity: sha512-o+Ba2XMUIDqUmX23pKo9k2R1kB151WPhXH9ibGOjoO83ZXUg8EKRrTVQQKqvUChtN0245QMJyjOWIEhlMikpPw==}
+    engines: {node: '>=20.19'}
+    peerDependencies:
+      morphicons: ^1.7.1
+      react: '>=18'
 
   eciesjs@0.5.0:
     resolution: {integrity: sha512-s0J9SEVYAEPg7J63GFMApLYzPH9VNIQIyC6s15JpnqVc0TqcKWdbgFlnAweEBRyMmko2dcs2sfC83Hj4J43tuA==}
@@ -5504,6 +5514,11 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-errors: 1.3.0
       gopd: 1.2.0
+
+  dynamic-icons@0.1.0(morphicons@1.7.1(react@19.3.0))(react@19.3.0):
+    dependencies:
+      morphicons: 1.7.1(react@19.3.0)
+      react: 19.3.0
 
   eciesjs@0.5.0:
     dependencies:

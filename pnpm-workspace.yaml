@@ -2,3 +2,5 @@ allowBuilds:
   "@biomejs/biome": true
   esbuild: true
   supabase: true
+minimumReleaseAgeExclude:
+  - dynamic-icons@0.1.0

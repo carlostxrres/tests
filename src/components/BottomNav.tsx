@@ -1,9 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { DynamicIcon } from "@/components/DynamicIcon";
-import { folderSearchIcon } from "@/lib/dynamic-icons/folder-search";
-import { clipboardListIcon } from "@/lib/dynamic-icons/clipboard-list";
-import { settingsIcon } from "@/lib/dynamic-icons/settings";
+import { DynamicIcon, folderSearchIcon, clipboardListIcon, settingsIcon } from "dynamic-icons";
 
 const tabs = [
   { to: "/explore", label: "Explorar", icon: folderSearchIcon },
@@ -40,7 +37,12 @@ export function BottomNav() {
                       isActive && "bg-accent",
                     )}
                   >
-                    <DynamicIcon icon={icon} active={isActive} className="size-5" aria-hidden="true" />
+                    <DynamicIcon
+                      icon={icon}
+                      state={isActive ? "on" : "off"}
+                      className="size-5"
+                      aria-hidden="true"
+                    />
                   </span>
                   <span className="truncate">{label}</span>
                 </>
