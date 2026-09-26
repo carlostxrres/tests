@@ -12,7 +12,8 @@
     "format": "biome format --write .",
     "db:seed": "tsx --env-file=.env scripts/seed.ts",
     "db:push": "sh -c 'set -a; . ./.env; set +a; supabase db push --db-url \"$DIRECT_URL\"'",
-    "db:types": "sh -c 'set -a; . ./.env; set +a; supabase gen types typescript --db-url \"$DIRECT_URL\" > src/lib/database.types.ts'"
+    "db:types": "sh -c 'set -a; . ./.env; set +a; supabase gen types typescript --db-url \"$DIRECT_URL\" > src/lib/database.types.ts'",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -48,6 +49,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
+    "react-doctor": "^0.9.14",
     "supabase": "^2.117.0",
     "tsx": "^4.23.13",
     "typescript": "~6.0.3",
